@@ -85,7 +85,7 @@ function Navbar() {
                 <div className='space-y-6 border-t border-gray-300 px-4 py-6'>
                   <div className='flow-root'>
                     <Link
-                      to={'/auth/login'}
+                      to={'/account/login'}
                       className='bg-transparent hover:bg-gray-200 text-gray-700 font-semibold py-1 px-4 border border-black rounded-full'
                       onClick={() => setOpen(false)}
                     >
@@ -94,7 +94,7 @@ function Navbar() {
                   </div>
                   <div className='flow-root'>
                     <Link
-                      to={'/auth/register'}
+                      to={'/account/register'}
                       className='bg-black hover:bg-gray-700 text-gray-100 font-semibold py-1 px-4 border border-black rounded-full'
                       onClick={() => setOpen(false)}
                     >
