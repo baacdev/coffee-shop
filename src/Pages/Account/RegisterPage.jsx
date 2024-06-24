@@ -22,9 +22,9 @@ function RegisterPage() {
           <form className='space-y-4' action='#' method='POST'>
             <a className='text-left text-sm font-bold font-opensanss tracking-tight text-gray-500'>
               * indica campo obligatorio
-            </a>           
+            </a>
             <div>
-               <h1 className='text-xl font-black font-opensans mb-4'>Información personal</h1>
+              <h1 className='text-xl font-black font-opensans mb-4'>Información personal</h1>
               <label htmlFor='firstName' className='text-gray-700 text-sm font-opensans font-black leading-6 block'>
                 * Nombres
               </label>
@@ -54,9 +54,9 @@ function RegisterPage() {
                 />
               </div>
             </div>
-          
+
             <div>
-            <h1 className='text-xl font-black font-opensans mt-10 mb-4'>Seguridad de la cuenta</h1>
+              <h1 className='text-xl font-black font-opensans mt-10 mb-4'>Seguridad de la cuenta</h1>
               <label htmlFor='email' className='text-gray-700 text-sm font-opensans font-black leading-6 block'>
                 * Dirección de correo electrónico
               </label>
@@ -107,13 +107,14 @@ function RegisterPage() {
               </button>
             </div>
           </form>
-
-          <p className='mt-10 text-sm font-semibold font-opensans text-gray-500'>
-            ¿Ya tienes una cuenta?{' '}
-            <Link to={'/account/login'} className='font-black underline underline-offset-2 text-orange-800 hover:text-orange-900'>
-              Inicia sesión
-            </Link>
-          </p>
+          <div className='sm:mx-auto sm:w-full sm:max-w-sm text-left mb-10'>
+            <p className='mt-10 text-sm font-semibold font-opensans text-gray-500'>
+              ¿Ya tienes una cuenta?{' '}
+              <Link to={'/account/login'} className='font-black underline underline-offset-2 text-orange-800 hover:text-orange-900'>
+                Inicia sesión
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
     </>

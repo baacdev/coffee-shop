@@ -82,7 +82,7 @@ function LoginPage() {
 
           </form>
         </div>
-        <div className='sm:mx-auto sm:w-full sm:max-w-sm text-center'>
+        <div className='sm:mx-auto sm:w-full sm:max-w-sm text-center mb-10'>
           <h2 className='mt-40 text-center text-base font-black font-opensans leading-9 tracking-tight text-gray-900'>
             ÚNETE A 'TU EMPRESA'® REWARDS
           </h2>
