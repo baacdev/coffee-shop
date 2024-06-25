@@ -76,7 +76,7 @@ function App() {
 
          {/* Ruta de los links del footer */}
          <Route path='/our-company' element={<OurCompany /> } />
-         <Route path='/our-eoffee' element={<OurCoffee /> } />
+         <Route path='/our-coffee' element={<OurCoffee /> } />
          <Route path='/customer-service' element={<CustomerService /> } />
          <Route path='/line-and-ethics' element={<LineAndEthics /> } />
          <Route path='/culture-and-values' element={<CultureAndValues /> } />

@@ -5,74 +5,74 @@ import { Link } from 'react-router-dom';
 // links
 const SITEMAP = [
   {
-    title: 'Sobre Nosotros',
+    title: 'About Us',
     links: [
       {
-        name: 'Nuestra compañía',
+        name: 'Our company',
         href: '/our-company',
       },
       {
-        name: 'Nuestro Café',
-        href: '/our-eoffee',
+        name: 'Our Coffee',
+        href: '/our-coffee',
       },
       {
-        name: 'Servicio al cliente',
+        name: 'Customer Service',
         href: '/customer-service',
       },
       {
-        name: 'Línea y ética',
+        name: 'Line and ethics',
         href: '/line-and-ethics',
       },
     ],
   },
   {
-    title: 'Nuestra Cultura',
+    title: 'Our Culture',
     links: [
       {
-        name: 'Cultura y Valores',
+        name: 'Culture and Values',
         href: '/culture-and-values',
       },
       {
-        name: 'Trabaja con nosotros',
+        name: 'Work with us',
         href: '/work-with-us',
       },
     ],
   },
   {
-    title: 'Impacto Social',
+    title: 'Social Impact',
     links: [
       {
-        name: 'Planeta',
+        name: 'Planet',
         href: '/planet',
       },
       {
-        name: 'Personas',
+        name: 'People',
         href: '/people',
       },
     ],
   },
   {
-    title: 'Politícas',
+    title: 'Policies',
     links: [
       {
-        name: 'Términos y condiciones de NOMBRE DE LA EMPRESA',
+        name: 'Terms and conditions of COMPANY NAME',
         href: '/terminos-y-condiciones',
       },
       {
-        name: 'Preguntas frecuentes',
+        name: 'FAQ',
         href: '/preguntas-frecuentes',
       },
     ],
   },
   {
-    title: 'Atención al cliente',
+    title: 'Customer service',
     links: [
       {
-        name: 'Teléfono Arequipa: (01)505-0050',
+        name: 'Telephone Arequipa: (01)505-0050',
         href: '/',
       },
       {
-        name: 'Comprobantes electrónicos',
+        name: 'Electronic vouchers',
         href: '/electronic-vouchers',
       },
     ],
@@ -116,7 +116,7 @@ function Footer() {
             variant='small'
             className='text-gray-700 text-center font-medium font-opensans mb-4 md:mb-0'
           >
-            &copy; {currentYear} <a>NOMBRE DE LA EMPRESA</a>. Todos los derechos reservados.
+            &copy; {currentYear} <a>COMPANY NAME</a>. All rights reserved.
           </Typography>
           <div className='flex gap-4 text-blue-gray-900 sm:justify-center'>
             <Typography as='a' href='#' className='opacity-80 transition-opacity hover:opacity-100'>

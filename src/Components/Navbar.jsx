@@ -13,7 +13,7 @@ import { Bars3Icon, ShoppingBagIcon, XMarkIcon, MapPinIcon } from '@heroicons/re
 const navigation = {
   pages: [
     { name: 'Menu', href: '/ecommerce/section/menu' },
-    { name: 'Recompensas', href: '/rewards' },
+    { name: 'Rewards', href: '/rewards' },
     { name: 'GIFT CARDS', href: '/gift' },
   ],
 };
@@ -89,7 +89,7 @@ function Navbar() {
                       className='bg-transparent hover:bg-gray-200 text-gray-700 font-semibold py-1 px-4 border border-black rounded-full'
                       onClick={() => setOpen(false)}
                     >
-                      Iniciar sesión
+                      Log in
                     </Link>
                   </div>
                   <div className='flow-root'>
@@ -98,7 +98,7 @@ function Navbar() {
                       className='bg-black hover:bg-gray-700 text-gray-100 font-semibold py-1 px-4 border border-black rounded-full'
                       onClick={() => setOpen(false)}
                     >
-                      Crear una cuenta
+                      Create account
                     </Link>
                   </div>
                 </div>
@@ -162,12 +162,12 @@ function Navbar() {
               <div className='ml-auto flex items-center'>
                 <div className='ml-4 flow-root lg:mr-6'>
                   <Link to={'/ecommerce/store-locator'} className='group -m-2 flex items-center p-2'>
-                    <span className='mr-1 text-sm font-semibold text-black group-hover:text-orange-600'>Tienda</span>
+                    <span className='mr-1 text-sm font-semibold text-black group-hover:text-orange-600'>Store</span>
                     <MapPinIcon
                       className='h-6 w-6 flex-shrink-0 text-black group-hover:text-orange-600'
                       aria-hidden='true'
                     />
-                    <span className='sr-only'>ubicación</span>
+                    <span className='sr-only'>location</span>
                   </Link>
                 </div>
                 <div className='hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-2'>
@@ -175,13 +175,13 @@ function Navbar() {
                     to={'/account/login'}
                     className='bg-transparent hover:bg-gray-200 text-sm text-gray-700 font-semibold py-1 px-4 border border-black rounded-full'
                   >
-                    Iniciar sesión
+                    Log in
                   </Link>
                   <Link
                     to={'/account/register'}
                     className='bg-black hover:bg-gray-700 text-sm text-gray-100 font-semibold py-1 px-4 border border-black rounded-full'
                   >
-                    Crear una cuenta
+                    Create account
                   </Link>
                 </div>
 
@@ -193,7 +193,7 @@ function Navbar() {
                       aria-hidden='true'
                     />
                     <span className='ml-2 text-sm font-medium text-black group-hover:text-gray-500'>0</span>
-                    <span className='sr-only'>artículos en la cesta, ver bolsa</span>
+                    <span className='sr-only'>items in cart, see bag</span>
                   </Link>
                 </div>
               </div>
