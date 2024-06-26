@@ -2,90 +2,118 @@ import { useState } from 'react'
 import { Dialog, DialogPanel, Radio, RadioGroup, Transition, TransitionChild } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 
-const bebidasFrias = [
+const refreshers = [
   {
     id: 1,
-    name: 'Jugo de Espinaca y Manzana',
+    name: 'Strawberry Frozen Refresher',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/JUGO_DE_ESPINACA_Y_MANZANA_V2.png',
-    imageAlt: 'Bebida',
-    price: 'S/ 13.00',
-    description: 'Mezcla de jugos de espinaca, manzana y kion, prensado al frío. Sin endulzantes.',
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/STRAWBERRY_ACAI_FROZEN_REFRESHER_202303231539284586.PNG',
+    imageAlt: 'Drink',
+    price: '$4.20',
+    description: 'New! Drink made with green coffee extract, strawberry juice, in a frozen version. Without sweeteners. Reference images.',
     sizes: [
       {
         name: 'Alto',
-        millilimiters: '300',
-        price: 'S/ 16.50',
+        milliliters: '300',
+        price: '$4.20',
         inStock: true,
       },
       {
         name: 'Grande',
-        millilimiters: '400',
+        milliliters: '400',
         price: 'S/ 18.50',
         inStock: false,
       },
       {
         name: 'Venti',
-        millilimiters: '500',
-        price: 'S/ 19.50',
+        milliliters: '500',
+        price: '$5.10',
         inStock: true,
       },
     ],
   },
   {
     id: 2,
-    name: 'Jugo de Piña y Manzana',
+    name: 'Mango Dragon Frozen Refresher',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/JUGO_DE_PIÑA_Y_MANZANA_V2.png',
-    imageAlt: 'Bebida',
-    price: 'S/ 13.00',
-    description: 'Mezcla de jugos de piña, limón hierba buena y manzana prensado al frío. Sin endulzantes.',
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/MANGO_DRAGON_FROZEN_REFRESHER_202303231541268568.PNG',
+    imageAlt: 'Drink',
+    price: '$4.20',
+    description: 'New! Drink made with green coffee extract, real Pitahaya juice in frozen version. Without sweeteners. Reference images.',
     sizes: [
       {
         name: 'Alto',
-        millilimiters: '300',
-        price: 'S/ 16.50',
+        milliliters: '300',
+        price: '$4.20',
         inStock: true,
       },
       {
         name: 'Grande',
-        millilimiters: '400',
+        milliliters: '400',
         price: 'S/ 18.50',
         inStock: false,
       },
       {
         name: 'Venti',
-        millilimiters: '500',
-        price: 'S/ 19.50',
+        milliliters: '500',
+        price: '$5.10',
+        inStock: true,
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Strawberry Acaí Refresher',
+    href: '#',
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/STRAWBERRY_ACAI_REFRESHER_V2.png',
+    imageAlt: 'Drink',
+    price: '$4.20',
+    description: 'Drink made with green coffee bean extract, mixed with strawberry and acai juice. Without sweeteners. Reference images.',
+    sizes: [
+      {
+        name: 'Alto',
+        milliliters: '300',
+        price: '$4.20',
+        inStock: true,
+      },
+      {
+        name: 'Grande',
+        milliliters: '400',
+        price: 'S/ 18.50',
+        inStock: false,
+      },
+      {
+        name: 'Venti',
+        milliliters: '500',
+        price: '$5.10',
         inStock: true,
       },
     ],
   },
 ]
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-function BebidasFrias() {
+function Refreshers() {
   const [open, setOpen] = useState(false)
-  const [selectedBebidaFria, setSelectedBebidaFria] = useState(bebidasFrias[0])
-  const [selectedSize, setSelectedSize] = useState(selectedBebidaFria.sizes[0])
+  const [selectedRefresher, setSelectedRefresher] = useState(refreshers[0])
+  const [selectedSize, setSelectedSize] = useState(selectedRefresher.sizes[0])
 
-  const handleBebidaFriaClick = (bebidaFria) => {
-    setSelectedBebidaFria(bebidaFria)
-    setSelectedSize(bebidaFria.sizes[0])
+  const handleRefresherClick = (refresher) => {
+    setSelectedRefresher(refresher)
+    setSelectedSize(refresher.sizes[0])
     setOpen(true)
   }
   return (
     <div className='flex flex-col justify-between mx-auto max-w-2xl px-4 py-1 sm:px-6 sm:py-10 lg:max-w-7xl lg:px-8'>
       <div className='mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-20'>
-        {bebidasFrias.map((bebidaFria) => (
-          <div key={bebidaFria.id} className='group relative flex' onClick={() => handleBebidaFriaClick(bebidaFria)}>
+        {refreshers.map((refresher) => (
+          <div key={refresher.id} className='group relative flex' onClick={() => handleRefresherClick(refresher)}>
             <div className='flex-shrink-0 size-32 lg:h-60 lg:w-60 overflow-hidden'>
               <img
-                src={bebidaFria.imageSrc}
-                alt={bebidaFria.imageAlt}
+                src={refresher.imageSrc}
+                alt={refresher.imageAlt}
                 className='h-full w-full object-cover object-center'
               />
             </div>
@@ -93,10 +121,10 @@ function BebidasFrias() {
               <h3 className='text-gray-700 text-base font-bold font-opensans'>
                 <a className='hover:text-orange-500 cursor-pointer'>
                   <span aria-hidden='true' className='absolute inset-0' />
-                  {bebidaFria.name}
+                  {refresher.name}
                 </a>
               </h3>
-              <p className='text-gray-900 text-sm font-semibold font-opensans'>Desde: {bebidaFria.price}</p>
+              <p className='text-gray-900 text-sm font-semibold font-opensans'>From: {refresher.price}</p>
             </div>
           </div>
         ))}
@@ -138,33 +166,33 @@ function BebidasFrias() {
                     <div className='grid grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8 w-full'>
                       <div className='flex-shrink-0 size-60 lg:h-full lg:w-full overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5 flex items-center justify-center mx-auto'>
                         <img
-                          src={selectedBebidaFria.imageSrc}
-                          alt={selectedBebidaFria.imageAlt}
+                          src={selectedRefresher.imageSrc}
+                          alt={selectedRefresher.imageAlt}
                           className='object-cover object-center size-full lg:size-auto'
                         />
                       </div>
                       <div className='sm:col-span-8 lg:col-span-7'>
-                        <h2 className='text-2xl font-bold text-gray-900 sm:pr-12'>{selectedBebidaFria.name}</h2>
+                        <h2 className='text-2xl font-bold text-gray-900 sm:pr-12'>{selectedRefresher.name}</h2>
 
                         <section aria-labelledby='information-heading' className='mt-2'>
                           <h3 id='information-heading' className='sr-only'>
-                            bebida Fria information
+                            refresher information
                           </h3>
 
-                          <p className='text-sm text-gray-900 lg:text-lg'>{selectedBebidaFria.description}</p>
+                          <p className='text-sm text-gray-900 lg:text-lg'>{selectedRefresher.description}</p>
                         </section>
 
                         <section aria-labelledby='options-heading' className='mt-10'>
                           <form>
                             {/* Size */}
                             <fieldset aria-label='Choose a Size'>
-                              <legend className='text-sm font-medium text-gray-900'>Tamaño</legend>
+                              <legend className='text-sm font-medium text-gray-900'>Size</legend>
                               <RadioGroup
                                 value={selectedSize}
                                 onChange={setSelectedSize}
                                 className='mt-4 flex justify-around space-x-3'
                               >
-                                {selectedBebidaFria.sizes.map((size) => (
+                                {selectedRefresher.sizes.map((size) => (
                                   <Radio
                                     key={size.name}
                                     value={size}
@@ -179,12 +207,12 @@ function BebidasFrias() {
                                       )
                                     }
                                   >
-                                    {/* Revisar si esta en Stock(true) o no(false) */}
+                                    {/* Check if in Stock(true) or not(false) */}
                                     {({ checked, focus }) => (
                                       <>
                                         <div className='text-center' aria-hidden='true'>
                                           <h3 className='text-sm text-gray-700'>
-                                            {size.millilimiters} ml
+                                            {size.milliliters} ml
                                           </h3>
                                           <p className='mt-1 text-sm text-gray-500'>{size.price}</p>
                                         </div>
@@ -223,7 +251,7 @@ function BebidasFrias() {
                               type='submit'
                               className='mt-6 flex w-full items-center justify-center rounded-md border border-transparent bg-orange-500 px-8 py-3 text-base font-medium text-white hover:bg-orange-600 focus-none'
                             >
-                              Add to bag
+                              Add to cart
                             </button>
                           </form>
                         </section>
@@ -240,4 +268,4 @@ function BebidasFrias() {
   )
 }
 
-export default BebidasFrias
+export default Refreshers

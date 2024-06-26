@@ -4,11 +4,6 @@ import Navbar from './Components/Navbar'
 
 import ScrollToTop from './Components/ScrollToTop'
 
-import AlimentosPage from './Pages/Products/Alimentos/AlimentosPage'
-import BebidasPage from './Pages/Products/Bebidas/BebidasPage'
-import MercanciaPage from './Pages/Products/Mercancia/MercanciaPage'
-import PacksPage from './Pages/Products/Packs/PacksPage'
-
 import LoginPage from './Pages/Account/LoginPage'
 import RegisterPage from './Pages/Account/RegisterPage'
 import ForgotPasswordPage from './Pages/Account/ForgotPasswordPage'
@@ -35,46 +30,41 @@ import ElectronicVouchers from './Pages/Footer/CustomerSupport/ElectronicVoucher
 function App() {
   return (
     <BrowserRouter>
-      {/* Componente ScrollToTop para asegurar que la página se desplace arriba al cambiar de ruta */}
+      {/* ScrollToTop component to ensure that the page scrolls up when changing paths */}
       <ScrollToTop />
       
-      {/* Navbar de la aplicación */}
+      {/* Application Navbar */}
       <Navbar />
       
       <Routes>
-        {/* Ruta principal que muestra la página de promociones */}
+        {/* Main path showing the promotions page */}
         <Route path='/' element={<HomePage />} />
         
-        {/* Rutas de autenticación */}
+        {/* Authentication routes */}
         <Route path='/account/login' element={<LoginPage />} />
         <Route path='/account/register' element={<RegisterPage />} />
         <Route path='/account/forgot-password' element={<ForgotPasswordPage />} />
         
-        {/* Ruta para mostrar un menú específico */}
-        <Route path='/ecommerce/section/menu/*' element={<MenuPage />} />
+        {/* Path to display a specific menu */}
+        <Route path='/menu/*' element={<MenuPage />} />
         
-        {/* Rutas para productos específicos */}
-        <Route path='/ecommerce/section/bebidas/:drinkName' element={<BebidasPage />} />
-        <Route path='/ecommerce/section/alimentos/:foodName' element={<AlimentosPage />} />
-        <Route path='/ecommerce/section/merch-y-cafe-en-grano/:merchName' element={<MercanciaPage />} />
-        <Route path='/ecommerce/section/packs-y-boxes/:packName' element={<PacksPage />} />
         
-        {/* Ruta para localizador de tiendas */}
-        <Route path='/ecommerce/store-locator' element={<MainAddress />} />
+        {/* Route to shop locator */}
+        <Route path='/store-locator' element={<MainAddress />} />
         
-        {/* Ruta para el carrito de compras */}
-        <Route path='/ecommerce/cart' element={<ShoppingCart />} />
+        {/* Shopping cart route */}
+        <Route path='/cart' element={<ShoppingCart />} />
 
-        {/* Ruta de recompensas*/}
+        {/* Rewards Route */}
         <Route path='/rewards' element={<RewardsPage /> } />
 
-        {/* Ruta de targetas de regalo*/}
+        {/* Gift card route */}
         <Route path='/gift' element={<GiftCardsPage /> } />
         
-        {/* Ruta de pruebas, posiblemente para desarrollo */}
+        {/* Test route, possibly for development */}
         <Route path='/ecommerce/section/pruebas' element={<PruebasPage />} />
 
-         {/* Ruta de los links del footer */}
+         {/* Footer link path */}
          <Route path='/our-company' element={<OurCompany /> } />
          <Route path='/our-coffee' element={<OurCoffee /> } />
          <Route path='/customer-service' element={<CustomerService /> } />
@@ -90,7 +80,7 @@ function App() {
 
       </Routes>
       
-      {/* Footer de la aplicación */}
+      {/* Application footer */}
       <Footer />
     </BrowserRouter>
   )

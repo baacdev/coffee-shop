@@ -2,90 +2,90 @@ import { useState } from 'react'
 import { Dialog, DialogPanel, Radio, RadioGroup, Transition, TransitionChild } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 
-const espressosCalientes = [
+const coldEspressos = [
   {
     id: 1,
-    name: 'Mocha Macchiato con bebida de avena',
+    name: 'Cold Latte with oat drink',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/COCOA_MACCHIATO_CON_LECHE_DE_AVENA_ECOMMERCE.png',
-    imageAlt: 'Bebida',
-    price: 'S/ 16.00',
-    description: 'Un macchiatto con un twist, agregamos cocoa, topping de mocha y deliciosa bebida de avena vaporizada. Sin endulzantes adicionales. Imágenes referenciales.',
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/ICED_LATTE_CON_LECHE_DE_AVENA_ECOMMERCE.png',
+    imageAlt: 'Drink',
+    price: '$4.20',
+    description: 'Full body espresso coffee blended with steamed oat drink. Reference images.',
     sizes: [
       {
         name: 'Alto',
-        millilimiters: '300',
-        price: 'S/ 16.50',
+        milliliters: '300',
+        price: '$4.20',
         inStock: true,
       },
       {
         name: 'Grande',
-        millilimiters: '400',
-        price: 'S/ 18.50',
+        milliliters: '400',
+        price: '$4.85',
         inStock: false,
       },
       {
         name: 'Venti',
-        millilimiters: '500',
-        price: 'S/ 19.50',
+        milliliters: '500',
+        price: '$5.10',
         inStock: true,
       },
     ],
   },
   {
     id: 2,
-    name: 'Black & White Mocha',
+    name: 'Cold Cocoa Macchiato with oat drink',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/BLACK_AND_WHITE_MOCHA_V2.png',
-    imageAlt: 'Bebida',
-    price: 'S/ 14.50',
-    description: 'Café Espresso con capas de mocha y mocha blanco combinadas en leche vaporizaday chispas sabor chocolate. No lleva crema batida. Sin endulzantes. Imágenes referenciales.',
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/MOCHA_MACCHIATO_FRÍO_ECOMMERCE.png',
+    imageAlt: 'Drink',
+    price: '$4.20',
+    description: 'A macchiato with a twist, added cocoa, mocha topping and delicious cold oat drink. No additional sweeteners. Reference images.',
     sizes: [
       {
         name: 'Alto',
-        millilimiters: '300',
-        price: 'S/ 16.50',
+        milliliters: '300',
+        price: '$4.20',
         inStock: true,
       },
       {
         name: 'Grande',
-        millilimiters: '400',
-        price: 'S/ 18.50',
+        milliliters: '400',
+        price: '$4.85',
         inStock: false,
       },
       {
         name: 'Venti',
-        millilimiters: '500',
-        price: 'S/ 19.50',
+        milliliters: '500',
+        price: '$5.10',
         inStock: true,
       },
     ],
   },
   {
     id: 3,
-    name: 'Americano',
+    name: 'Black Cold Brew',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/AMERICANO_V2.png',
-    imageAlt: 'Bebida',
-    price: 'S/ 9.00',
-    description: 'Café Espresso de cuerpo completo con agua caliente. En caso la pidas por Delivery, la bebida se entregará en un vaso de tamaño mayor para evitar derrames. Imágenes referenciales.',
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/BLACK_COLD_BREW_V2.png',
+    imageAlt: 'Drink',
+    price: '$4.20',
+    description: ' Intense coffee filtered for more than 20 hours, served with water and ice cubes. Reference images.',
     sizes: [
       {
         name: 'Alto',
-        millilimiters: '300',
-        price: 'S/ 16.50',
+        milliliters: '300',
+        price: '$4.20',
         inStock: true,
       },
       {
         name: 'Grande',
-        millilimiters: '400',
-        price: 'S/ 18.50',
+        milliliters: '400',
+        price: '$4.85',
         inStock: false,
       },
       {
         name: 'Venti',
-        millilimiters: '500',
-        price: 'S/ 19.50',
+        milliliters: '500',
+        price: '$5.10',
         inStock: true,
       },
     ],
@@ -95,26 +95,25 @@ const espressosCalientes = [
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
-
-function EspressosCalientes() {
+function ColdEspresso() {
   const [open, setOpen] = useState(false)
-  const [selectedEspressoCaliente, setSelectedEspressoCaliente] = useState(espressosCalientes[0])
-  const [selectedSize, setSelectedSize] = useState(selectedEspressoCaliente.sizes[0])
+  const [selectedColdEspresso, setSelectedColdEspresso] = useState(coldEspressos[0])
+  const [selectedSize, setSelectedSize] = useState(selectedColdEspresso.sizes[0])
 
-  const handleEspressoCalienteClick = (EspressoCaliente) => {
-    setSelectedEspressoCaliente(EspressoCaliente)
-    setSelectedSize(EspressoCaliente.sizes[0])
+  const handleColdEspressoClick = (coldEspresso) => {
+    setSelectedColdEspresso(coldEspresso)
+    setSelectedSize(coldEspresso.sizes[0])
     setOpen(true)
   }
   return (
     <div className='flex flex-col justify-between mx-auto max-w-2xl px-4 py-1 sm:px-6 sm:py-10 lg:max-w-7xl lg:px-8'>
       <div className='mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-20'>
-        {espressosCalientes.map((EspressoCaliente) => (
-          <div key={EspressoCaliente.id} className='group relative flex' onClick={() => handleEspressoCalienteClick(EspressoCaliente)}>
+        {coldEspressos.map((coldEspresso) => (
+          <div key={coldEspresso.id} className='group relative flex' onClick={() => handleColdEspressoClick(coldEspresso)}>
             <div className='flex-shrink-0 size-32 lg:h-60 lg:w-60 overflow-hidden'>
               <img
-                src={EspressoCaliente.imageSrc}
-                alt={EspressoCaliente.imageAlt}
+                src={coldEspresso.imageSrc}
+                alt={coldEspresso.imageAlt}
                 className='h-full w-full object-cover object-center'
               />
             </div>
@@ -122,10 +121,10 @@ function EspressosCalientes() {
               <h3 className='text-gray-700 text-base font-bold font-opensans'>
                 <a className='hover:text-orange-500 cursor-pointer'>
                   <span aria-hidden='true' className='absolute inset-0' />
-                  {EspressoCaliente.name}
+                  {coldEspresso.name}
                 </a>
               </h3>
-              <p className='text-gray-900 text-sm font-semibold font-opensans'>Desde: {EspressoCaliente.price}</p>
+              <p className='text-gray-900 text-sm font-semibold font-opensans'>From: {coldEspresso.price}</p>
             </div>
           </div>
         ))}
@@ -167,33 +166,33 @@ function EspressosCalientes() {
                     <div className='grid grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8 w-full'>
                       <div className='flex-shrink-0 size-60 lg:h-full lg:w-full overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5 flex items-center justify-center mx-auto'>
                         <img
-                          src={selectedEspressoCaliente.imageSrc}
-                          alt={selectedEspressoCaliente.imageAlt}
+                          src={selectedColdEspresso.imageSrc}
+                          alt={selectedColdEspresso.imageAlt}
                           className='object-cover object-center size-full lg:size-auto'
                         />
                       </div>
                       <div className='sm:col-span-8 lg:col-span-7'>
-                        <h2 className='text-2xl font-bold text-gray-900 sm:pr-12'>{selectedEspressoCaliente.name}</h2>
+                        <h2 className='text-2xl font-bold text-gray-900 sm:pr-12'>{selectedColdEspresso.name}</h2>
 
                         <section aria-labelledby='information-heading' className='mt-2'>
                           <h3 id='information-heading' className='sr-only'>
-                            Espresso Caliente information
+                            Cold Espresso information
                           </h3>
 
-                          <p className='text-sm text-gray-900 lg:text-lg'>{selectedEspressoCaliente.description}</p>
+                          <p className='text-sm text-gray-900 lg:text-lg'>{selectedColdEspresso.description}</p>
                         </section>
 
                         <section aria-labelledby='options-heading' className='mt-10'>
                           <form>
                             {/* Size */}
                             <fieldset aria-label='Choose a Size'>
-                              <legend className='text-sm font-medium text-gray-900'>Tamaño</legend>
+                              <legend className='text-sm font-medium text-gray-900'>Size</legend>
                               <RadioGroup
                                 value={selectedSize}
                                 onChange={setSelectedSize}
                                 className='mt-4 flex justify-around space-x-3'
                               >
-                                {selectedEspressoCaliente.sizes.map((size) => (
+                                {selectedColdEspresso.sizes.map((size) => (
                                   <Radio
                                     key={size.name}
                                     value={size}
@@ -208,12 +207,12 @@ function EspressosCalientes() {
                                       )
                                     }
                                   >
-                                    {/* Revisar si esta en Stock(true) o no(false) */}
+                                    {/* Check if it is in stock(true) or not(false) */}
                                     {({ checked, focus }) => (
                                       <>
                                         <div className='text-center' aria-hidden='true'>
                                           <h3 className='text-sm text-gray-700'>
-                                            {size.millilimiters} ml
+                                            {size.milliliters} ml
                                           </h3>
                                           <p className='mt-1 text-sm text-gray-500'>{size.price}</p>
                                         </div>
@@ -252,7 +251,7 @@ function EspressosCalientes() {
                               type='submit'
                               className='mt-6 flex w-full items-center justify-center rounded-md border border-transparent bg-orange-500 px-8 py-3 text-base font-medium text-white hover:bg-orange-600 focus-none'
                             >
-                              Add to bag
+                              Cdd to cart
                             </button>
                           </form>
                         </section>
@@ -269,4 +268,4 @@ function EspressosCalientes() {
   )
 }
 
-export default EspressosCalientes
+export default ColdEspresso

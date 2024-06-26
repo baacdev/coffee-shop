@@ -12,7 +12,7 @@ import { Bars3Icon, ShoppingBagIcon, XMarkIcon, MapPinIcon } from '@heroicons/re
 
 const navigation = {
   pages: [
-    { name: 'Menu', href: '/ecommerce/section/menu' },
+    { name: 'Menu', href: '/menu' },
     { name: 'Rewards', href: '/rewards' },
     { name: 'GIFT CARDS', href: '/gift' },
   ],
@@ -161,7 +161,7 @@ function Navbar() {
 
               <div className='ml-auto flex items-center'>
                 <div className='ml-4 flow-root lg:mr-6'>
-                  <Link to={'/ecommerce/store-locator'} className='group -m-2 flex items-center p-2'>
+                  <Link to={'/store-locator'} className='group -m-2 flex items-center p-2'>
                     <span className='mr-1 text-sm font-semibold text-black group-hover:text-orange-600'>Store</span>
                     <MapPinIcon
                       className='h-6 w-6 flex-shrink-0 text-black group-hover:text-orange-600'
@@ -187,7 +187,7 @@ function Navbar() {
 
                 {/* Cart */}
                 <div className='ml-4 flow-root lg:ml-6'>
-                  <Link to={'/ecommerce/cart'} className='group -m-2 flex items-center p-2'>
+                  <Link to={'/cart'} className='group -m-2 flex items-center p-2'>
                     <ShoppingBagIcon
                       className='h-6 w-6 flex-shrink-0 text-black group-hover:text-gray-500'
                       aria-hidden='true'

@@ -2,119 +2,91 @@ import { useState } from 'react'
 import { Dialog, DialogPanel, Radio, RadioGroup, Transition, TransitionChild } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 
-const espressosFrios = [
+const shakenEspressos = [
   {
     id: 1,
-    name: 'Latte Frío con bebida de avena',
+    name: 'Brown Sugar Shaken Cold Espresso with Oatmeal Drink',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/ICED_LATTE_CON_LECHE_DE_AVENA_ECOMMERCE.png',
-    imageAlt: 'Bebida',
-    price: 'S/ 16.00',
-    description: 'Café espresso de cuerpo completo mezclado con bebida de avena vaporizada. Imágenes referenciales.',
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/BROWN_SUGAR_FRIO_SHAKEN_EXPRESSO_CON_BEBIDA_DE_AVENA_202303131838327498.PNG',
+    imageAlt: 'Drink',
+    price: '$4.00',
+    description: 'Iced drink made from espresso, brown sugar syrup and cinnamon powder topped with oat drink and ice cubes.',
     sizes: [
       {
         name: 'Alto',
-        millilimiters: '300',
-        price: 'S/ 16.50',
+        milliliters: '300',
+        price: '$4.00',
         inStock: true,
       },
       {
         name: 'Grande',
-        millilimiters: '400',
-        price: 'S/ 18.50',
+        milliliters: '400',
+        price: '$6.00',
         inStock: false,
       },
       {
         name: 'Venti',
-        millilimiters: '500',
-        price: 'S/ 19.50',
+        milliliters: '500',
+        price: '$7.00',
         inStock: true,
       },
     ],
   },
   {
     id: 2,
-    name: 'Cocoa Macchiatto Frío con bebida de avena',
+    name: 'Toasted Vanilla Shaken Cold Espresso with Oatmeal Beverage',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/MOCHA_MACCHIATO_FRÍO_ECOMMERCE.png',
-    imageAlt: 'Bebida',
-    price: 'S/ 16.00',
-    description: 'Un macchiatto con un twist, agregamos cocoa, topping de mocha y deliciosa bebida de avena fría. Sin endulzantes adicionales. Imágenes referenciales.',
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/TOASTED_VAINILLA_FRIO_SHAKEN_EXPRESSO_CON_BEBIDA_DE_AVENA_202303131840473348.PNG',
+    imageAlt: 'Drink',
+    price: '$4.00',
+    description: 'Iced drink made from espresso, roasted vanilla syrup, topped with oat drink and ice cubes.',
     sizes: [
       {
         name: 'Alto',
-        millilimiters: '300',
-        price: 'S/ 16.50',
+        milliliters: '300',
+        price: '$4.00',
         inStock: true,
       },
       {
         name: 'Grande',
-        millilimiters: '400',
-        price: 'S/ 18.50',
+        milliliters: '400',
+        price: '$5.00',
         inStock: false,
       },
       {
         name: 'Venti',
-        millilimiters: '500',
-        price: 'S/ 19.50',
-        inStock: true,
-      },
-    ],
-  },
-  {
-    id: 3,
-    name: 'Black Cold Brew',
-    href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/BLACK_COLD_BREW_V2.png',
-    imageAlt: 'Bebida',
-    price: 'S/ 10.00',
-    description: 'Café intenso filtrado por más de 20 horas, servido con agua y cubos de hielo. Sin endulzantes. Imágenes referenciales.',
-    sizes: [
-      {
-        name: 'Alto',
-        millilimiters: '300',
-        price: 'S/ 16.50',
-        inStock: true,
-      },
-      {
-        name: 'Grande',
-        millilimiters: '400',
-        price: 'S/ 18.50',
-        inStock: false,
-      },
-      {
-        name: 'Venti',
-        millilimiters: '500',
-        price: 'S/ 19.50',
+        milliliters: '500',
+        price: '$7.00',
         inStock: true,
       },
     ],
   },
 ]
 
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-function EspressosFrios() {
+function ShakenEspresso() {
   const [open, setOpen] = useState(false)
-  const [selectedEspressoFrio, setSelectedEspressoFrio] = useState(espressosFrios[0])
-  const [selectedSize, setSelectedSize] = useState(selectedEspressoFrio.sizes[0])
+  const [selectedShakenEspresso, setSelectedShakenEspresso] = useState(shakenEspressos[0])
+  const [selectedSize, setSelectedSize] = useState(selectedShakenEspresso.sizes[0])
 
-  const handleEspressoFrioClick = (espressoFrio) => {
-    setSelectedEspressoFrio(espressoFrio)
-    setSelectedSize(espressoFrio.sizes[0])
+  const handleShakenEspressoClick = (shakenEspresso) => {
+    setSelectedShakenEspresso(shakenEspresso)
+    setSelectedSize(shakenEspresso.sizes[0])
     setOpen(true)
   }
   return (
     <div className='flex flex-col justify-between mx-auto max-w-2xl px-4 py-1 sm:px-6 sm:py-10 lg:max-w-7xl lg:px-8'>
       <div className='mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-20'>
-        {espressosFrios.map((espressoFrio) => (
-          <div key={espressoFrio.id} className='group relative flex' onClick={() => handleEspressoFrioClick(espressoFrio)}>
+        {shakenEspressos.map((shakenEspresso) => (
+          <div key={shakenEspresso.id} className='group relative flex' onClick={() => handleShakenEspressoClick(shakenEspresso)}>
             <div className='flex-shrink-0 size-32 lg:h-60 lg:w-60 overflow-hidden'>
               <img
-                src={espressoFrio.imageSrc}
-                alt={espressoFrio.imageAlt}
+                src={shakenEspresso.imageSrc}
+                alt={shakenEspresso.imageAlt}
                 className='h-full w-full object-cover object-center'
               />
             </div>
@@ -122,10 +94,10 @@ function EspressosFrios() {
               <h3 className='text-gray-700 text-base font-bold font-opensans'>
                 <a className='hover:text-orange-500 cursor-pointer'>
                   <span aria-hidden='true' className='absolute inset-0' />
-                  {espressoFrio.name}
+                  {shakenEspresso.name}
                 </a>
               </h3>
-              <p className='text-gray-900 text-sm font-semibold font-opensans'>Desde: {espressoFrio.price}</p>
+              <p className='text-gray-900 text-sm font-semibold font-opensans'>From: {shakenEspresso.price}</p>
             </div>
           </div>
         ))}
@@ -167,33 +139,33 @@ function EspressosFrios() {
                     <div className='grid grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8 w-full'>
                       <div className='flex-shrink-0 size-60 lg:h-full lg:w-full overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5 flex items-center justify-center mx-auto'>
                         <img
-                          src={selectedEspressoFrio.imageSrc}
-                          alt={selectedEspressoFrio.imageAlt}
+                          src={selectedShakenEspresso.imageSrc}
+                          alt={selectedShakenEspresso.imageAlt}
                           className='object-cover object-center size-full lg:size-auto'
                         />
                       </div>
                       <div className='sm:col-span-8 lg:col-span-7'>
-                        <h2 className='text-2xl font-bold text-gray-900 sm:pr-12'>{selectedEspressoFrio.name}</h2>
+                        <h2 className='text-2xl font-bold text-gray-900 sm:pr-12'>{selectedShakenEspresso.name}</h2>
 
                         <section aria-labelledby='information-heading' className='mt-2'>
                           <h3 id='information-heading' className='sr-only'>
-                            Espresso Frio information
+                            Shaken Espresso information
                           </h3>
 
-                          <p className='text-sm text-gray-900 lg:text-lg'>{selectedEspressoFrio.description}</p>
+                          <p className='text-sm text-gray-900 lg:text-lg'>{selectedShakenEspresso.description}</p>
                         </section>
 
                         <section aria-labelledby='options-heading' className='mt-10'>
                           <form>
                             {/* Size */}
                             <fieldset aria-label='Choose a Size'>
-                              <legend className='text-sm font-medium text-gray-900'>Tamaño</legend>
+                              <legend className='text-sm font-medium text-gray-900'>Size</legend>
                               <RadioGroup
                                 value={selectedSize}
                                 onChange={setSelectedSize}
                                 className='mt-4 flex justify-around space-x-3'
                               >
-                                {selectedEspressoFrio.sizes.map((size) => (
+                                {selectedShakenEspresso.sizes.map((size) => (
                                   <Radio
                                     key={size.name}
                                     value={size}
@@ -208,12 +180,12 @@ function EspressosFrios() {
                                       )
                                     }
                                   >
-                                    {/* Revisar si esta en Stock(true) o no(false) */}
+                                    {/* Check if in Stock(true) or not(false) */}
                                     {({ checked, focus }) => (
                                       <>
                                         <div className='text-center' aria-hidden='true'>
                                           <h3 className='text-sm text-gray-700'>
-                                            {size.millilimiters} ml
+                                            {size.milliliters} ml
                                           </h3>
                                           <p className='mt-1 text-sm text-gray-500'>{size.price}</p>
                                         </div>
@@ -252,7 +224,7 @@ function EspressosFrios() {
                               type='submit'
                               className='mt-6 flex w-full items-center justify-center rounded-md border border-transparent bg-orange-500 px-8 py-3 text-base font-medium text-white hover:bg-orange-600 focus-none'
                             >
-                              Add to bag
+                              Add to cart
                             </button>
                           </form>
                         </section>
@@ -269,4 +241,4 @@ function EspressosFrios() {
   )
 }
 
-export default EspressosFrios
+export default ShakenEspresso

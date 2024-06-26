@@ -7,26 +7,26 @@ const frappuccinos = [
     id: 1,
     name: 'Retro Frappuccino',
     imageSrc: 'https://www.starbucks.pe/Multimedia/productos/RETRO_FRAPPUCCINO_202405031709509334.PNG',
-    imageAlt: 'Bebida',
-    price: 'S/ 16.50',
-    description: 'Frappuccino sin café de vainilla e inclusión de mango dragon fruit terminado con crema batida.',
+    imageAlt: 'Drink',
+    price: '$4.30',
+    description: 'Frappuccino without vanilla coffee and inclusion of mango dragon fruit finished with whipped cream.',
     sizes: [
       {
         name: 'Alto',
-        millilimiters: '300',
-        price: 'S/ 16.50',
+        milliliters: '300',
+        price: '$4.30',
         inStock: true,
       },
       {
         name: 'Grande',
-        millilimiters: '400',
-        price: 'S/ 18.50',
+        milliliters: '400',
+        price: '$4.85',
         inStock: false,
       },
       {
         name: 'Venti',
-        millilimiters: '500',
-        price: 'S/ 19.50',
+        milliliters: '500',
+        price: '$5.10',
         inStock: true,
       },
     ],
@@ -35,26 +35,26 @@ const frappuccinos = [
     id: 2,
     name: 'Cookies & Creme Frappuccino',
     imageSrc: 'https://www.starbucks.pe/Multimedia/productos/COOKIES_CREAM_FRAPPUCCINO_202303061805104998.PNG',
-    imageAlt: 'Bebida',
-    price: 'S/ 16.50',
-    description: 'Clásico frappuccino de leche batido con mocha blanco y gotas sabor a chocolate, jarabe de azúcar y decorado con crema batida y topping de galletas trozadas.',
+    imageAlt: 'Drink',
+    price: '$4.30',
+    description: 'Classic milk frappuccino whipped with white mocha and chocolate drops, sugar syrup and decorated with whipped cream and cookie crumb topping.',
     sizes: [
       {
         name: 'Alto',
-        millilimiters: '300',
-        price: 'S/ 16.50',
+        milliliters: '300',
+        price: '$4.30',
         inStock: true,
       },
       {
         name: 'Grande',
-        millilimiters: '400',
-        price: 'S/ 18.50',
+        milliliters: '400',
+        price: '$4.85',
         inStock: false,
       },
       {
         name: 'Venti',
-        millilimiters: '500',
-        price: 'S/ 19.50',
+        milliliters: '500',
+        price: '$5.10',
         inStock: true,
       },
     ],
@@ -63,26 +63,26 @@ const frappuccinos = [
     id: 3,
     name: 'Chocolate Cookies & Creme Frappuccino',
     imageSrc: 'https://www.starbucks.pe/Multimedia/productos/CHOCOLATE_COOKIES_CREAM_FRAPPUCCINO_202303061807246058.PNG',
-    imageAlt: 'Bebida',
-    price: 'S/ 16.50',
-    description: 'Clásico frappuccino de leche batido con mocha y gotas sabor a chocolate, jarabe de azúcar y decorado con crema batida y topping de galletas trozadas.',
+    imageAlt: 'Drink',
+    price: '$4.30',
+    description: 'Classic milk frappuccino whipped with mocha and chocolate drops, sugar syrup and decorated with whipped cream and cookie crumb topping.',
     sizes: [
       {
         name: 'Alto',
-        millilimiters: '300',
-        price: 'S/ 16.50',
+        milliliters: '300',
+        price: '$4.30',
         inStock: true,
       },
       {
         name: 'Grande',
-        millilimiters: '400',
-        price: 'S/ 18.50',
+        milliliters: '400',
+        price: '$4.85',
         inStock: false,
       },
       {
         name: 'Venti',
-        millilimiters: '500',
-        price: 'S/ 19.50',
+        milliliters: '500',
+        price: '$5.10',
         inStock: true,
       },
     ],
@@ -121,7 +121,7 @@ function Frappuccinos() {
                   {frappuccino.name}
                 </a>
               </h3>
-              <p className='text-gray-900 text-sm font-semibold font-opensans'>Desde: {frappuccino.price}</p>
+              <p className='text-gray-900 text-sm font-semibold font-opensans'>From: {frappuccino.price}</p>
             </div>
           </div>
         ))}
@@ -183,7 +183,7 @@ function Frappuccinos() {
                           <form>
                             {/* Size */}
                             <fieldset aria-label='Choose a Size'>
-                              <legend className='text-sm font-medium text-gray-900'>Tamaño</legend>
+                              <legend className='text-sm font-medium text-gray-900'>Size</legend>
                               <RadioGroup
                                 value={selectedSize}
                                 onChange={setSelectedSize}
@@ -204,12 +204,12 @@ function Frappuccinos() {
                                       )
                                     }
                                   >
-                                    {/* Revisar si esta en Stock(true) o no(false) */}
+                                    {/* Check if it is in stock(true) or not(false) */}
                                     {({ checked, focus }) => (
                                       <>
                                         <div className='text-center' aria-hidden='true'>
                                           <h3 className='text-sm text-gray-700'>
-                                            {size.millilimiters} ml
+                                            {size.milliliters} ml
                                           </h3>
                                           <p className='mt-1 text-sm text-gray-500'>{size.price}</p>
                                         </div>
@@ -248,7 +248,7 @@ function Frappuccinos() {
                               type='submit'
                               className='mt-6 flex w-full items-center justify-center rounded-md border border-transparent bg-orange-500 px-8 py-3 text-base font-medium text-white hover:bg-orange-600 focus-none'
                             >
-                              Add to bag
+                              Add to cart
                             </button>
                           </form>
                         </section>

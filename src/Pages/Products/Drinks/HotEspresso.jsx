@@ -2,118 +2,119 @@ import { useState } from 'react'
 import { Dialog, DialogPanel, Radio, RadioGroup, Transition, TransitionChild } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 
-const refreshers = [
+const hotEspressos = [
   {
     id: 1,
-    name: 'Strawberry Acai Frozen Refresher',
+    name: 'Mocha Macchiato with oat drink',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/STRAWBERRY_ACAI_FROZEN_REFRESHER_202303231539284586.PNG',
-    imageAlt: 'Bebida',
-    price: 'S/ 16.00',
-    description: '¡Nuevo! Bebida elaborada con extracto de café verde, jugo de fresa y acaí, en versión frozen. Sin endulzantes. Imágenes referenciales.',
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/COCOA_MACCHIATO_CON_LECHE_DE_AVENA_ECOMMERCE.png',
+    imageAlt: 'Drink',
+    price: '$4.20',
+    description: 'A Macchiato with a twist, added cocoa, mocha topping and delicious steamed oat drink. No additional sweeteners. Reference images.',
     sizes: [
       {
         name: 'Alto',
-        millilimiters: '300',
-        price: 'S/ 16.50',
+        milliliters: '300',
+        price: '$4.20',
         inStock: true,
       },
       {
         name: 'Grande',
-        millilimiters: '400',
-        price: 'S/ 18.50',
+        milliliters: '400',
+        price: '$4.85',
         inStock: false,
       },
       {
         name: 'Venti',
-        millilimiters: '500',
-        price: 'S/ 19.50',
+        milliliters: '500',
+        price: '$5.10',
         inStock: true,
       },
     ],
   },
   {
     id: 2,
-    name: 'Mango Dragon Frozen Refresher',
+    name: 'Black & White Mocha',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/MANGO_DRAGON_FROZEN_REFRESHER_202303231541268568.PNG',
-    imageAlt: 'Bebida',
-    price: 'S/ 16.00',
-    description: '¡Nuevo! Bebida elaborada con extracto de café verde, jugo de Pitahaya real en versión frozen. Sin endulzantes. Imágenes referenciales.',
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/BLACK_AND_WHITE_MOCHA_V2.png',
+    imageAlt: 'Drink',
+    price: '$4.20',
+    description: 'Espresso coffee with layers of mocha and white mocha combined in steamed milk and chocolate chips. No whipped cream. No sweeteners. Reference images.',
     sizes: [
       {
         name: 'Alto',
-        millilimiters: '300',
-        price: 'S/ 16.50',
+        milliliters: '300',
+        price: '$4.20',
         inStock: true,
       },
       {
         name: 'Grande',
-        millilimiters: '400',
-        price: 'S/ 18.50',
+        milliliters: '400',
+        price: '$4.85',
         inStock: false,
       },
       {
         name: 'Venti',
-        millilimiters: '500',
-        price: 'S/ 19.50',
+        milliliters: '500',
+        price: '$5.10',
         inStock: true,
       },
     ],
   },
   {
     id: 3,
-    name: 'Strawberry Acaí Refresher',
+    name: 'Americano',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/STRAWBERRY_ACAI_REFRESHER_V2.png',
-    imageAlt: 'Bebida',
-    price: 'S/ 13.50',
-    description: 'Bebida elaborada con extracto de grano verde de café, mezclado con jugo de fresa y acaí. Sin endulzantes. Imágenes referenciales.',
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/AMERICANO_V2.png',
+    imageAlt: 'Drink',
+    price: '$4.20',
+    description: 'Full body espresso coffee with hot water. In case you order it by Delivery, the drink will be delivered in a larger glass to avoid spills. Reference images.',
     sizes: [
       {
         name: 'Alto',
-        millilimiters: '300',
-        price: 'S/ 16.50',
+        milliliters: '300',
+        price: '$4.20',
         inStock: true,
       },
       {
         name: 'Grande',
-        millilimiters: '400',
-        price: 'S/ 18.50',
+        milliliters: '400',
+        price: '$4.85',
         inStock: false,
       },
       {
         name: 'Venti',
-        millilimiters: '500',
-        price: 'S/ 19.50',
+        milliliters: '500',
+        price: '$5.10',
         inStock: true,
       },
     ],
   },
 ]
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-function Refreshers() {
+function HotEspresso() {
   const [open, setOpen] = useState(false)
-  const [selectedRefresher, setSelectedRefresher] = useState(refreshers[0])
-  const [selectedSize, setSelectedSize] = useState(selectedRefresher.sizes[0])
+  const [selectedHotEspresso, setSelectedHotEspresso] = useState(hotEspressos[0])
+  const [selectedSize, setSelectedSize] = useState(selectedHotEspresso.sizes[0])
 
-  const handleRefresherClick = (refresher) => {
-    setSelectedRefresher(refresher)
-    setSelectedSize(refresher.sizes[0])
+  const handleHotEspressoClick = (HotEspresso) => {
+    setSelectedHotEspresso(HotEspresso)
+    setSelectedSize(HotEspresso.sizes[0])
     setOpen(true)
   }
   return (
     <div className='flex flex-col justify-between mx-auto max-w-2xl px-4 py-1 sm:px-6 sm:py-10 lg:max-w-7xl lg:px-8'>
       <div className='mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-20'>
-        {refreshers.map((refresher) => (
-          <div key={refresher.id} className='group relative flex' onClick={() => handleRefresherClick(refresher)}>
+        {hotEspressos.map((HotEspresso) => (
+          <div key={HotEspresso.id} className='group relative flex' onClick={() => handleHotEspressoClick(HotEspresso)}>
             <div className='flex-shrink-0 size-32 lg:h-60 lg:w-60 overflow-hidden'>
               <img
-                src={refresher.imageSrc}
-                alt={refresher.imageAlt}
+                src={HotEspresso.imageSrc}
+                alt={HotEspresso.imageAlt}
                 className='h-full w-full object-cover object-center'
               />
             </div>
@@ -121,10 +122,10 @@ function Refreshers() {
               <h3 className='text-gray-700 text-base font-bold font-opensans'>
                 <a className='hover:text-orange-500 cursor-pointer'>
                   <span aria-hidden='true' className='absolute inset-0' />
-                  {refresher.name}
+                  {HotEspresso.name}
                 </a>
               </h3>
-              <p className='text-gray-900 text-sm font-semibold font-opensans'>Desde: {refresher.price}</p>
+              <p className='text-gray-900 text-sm font-semibold font-opensans'>From: {HotEspresso.price}</p>
             </div>
           </div>
         ))}
@@ -165,34 +166,34 @@ function Refreshers() {
 
                     <div className='grid grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8 w-full'>
                       <div className='flex-shrink-0 size-60 lg:h-full lg:w-full overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5 flex items-center justify-center mx-auto'>
-                        <img 
-                        src={selectedRefresher.imageSrc} 
-                        alt={selectedRefresher.imageAlt} 
-                        className='object-cover object-center size-full lg:size-auto' 
+                        <img
+                          src={selectedHotEspresso.imageSrc}
+                          alt={selectedHotEspresso.imageAlt}
+                          className='object-cover object-center size-full lg:size-auto'
                         />
                       </div>
                       <div className='sm:col-span-8 lg:col-span-7'>
-                        <h2 className='text-2xl font-bold text-gray-900 sm:pr-12'>{selectedRefresher.name}</h2>
+                        <h2 className='text-2xl font-bold text-gray-900 sm:pr-12'>{selectedHotEspresso.name}</h2>
 
                         <section aria-labelledby='information-heading' className='mt-2'>
                           <h3 id='information-heading' className='sr-only'>
-                          refresher information
+                            Hot Espresso information
                           </h3>
 
-                          <p className='text-sm text-gray-900 lg:text-lg'>{selectedRefresher.description}</p>
+                          <p className='text-sm text-gray-900 lg:text-lg'>{selectedHotEspresso.description}</p>
                         </section>
 
                         <section aria-labelledby='options-heading' className='mt-10'>
                           <form>
                             {/* Size */}
                             <fieldset aria-label='Choose a Size'>
-                              <legend className='text-sm font-medium text-gray-900'>Tamaño</legend>
+                              <legend className='text-sm font-medium text-gray-900'>Size</legend>
                               <RadioGroup
                                 value={selectedSize}
                                 onChange={setSelectedSize}
                                 className='mt-4 flex justify-around space-x-3'
                               >
-                                {selectedRefresher.sizes.map((size) => (
+                                {selectedHotEspresso.sizes.map((size) => (
                                   <Radio
                                     key={size.name}
                                     value={size}
@@ -207,12 +208,12 @@ function Refreshers() {
                                       )
                                     }
                                   >
-                                    {/* Revisar si esta en Stock(true) o no(false) */}
+                                    {/* Check if it is in stock(true) or not(false) */}
                                     {({ checked, focus }) => (
                                       <>
                                         <div className='text-center' aria-hidden='true'>
                                           <h3 className='text-sm text-gray-700'>
-                                            {size.millilimiters} ml
+                                            {size.milliliters} ml
                                           </h3>
                                           <p className='mt-1 text-sm text-gray-500'>{size.price}</p>
                                         </div>
@@ -251,7 +252,7 @@ function Refreshers() {
                               type='submit'
                               className='mt-6 flex w-full items-center justify-center rounded-md border border-transparent bg-orange-500 px-8 py-3 text-base font-medium text-white hover:bg-orange-600 focus-none'
                             >
-                              Add to bag
+                              Add to cart
                             </button>
                           </form>
                         </section>
@@ -268,4 +269,4 @@ function Refreshers() {
   )
 }
 
-export default Refreshers
+export default HotEspresso

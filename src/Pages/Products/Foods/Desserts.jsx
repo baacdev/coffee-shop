@@ -2,36 +2,36 @@ import { useState } from 'react'
 import { Dialog, DialogPanel, Radio, RadioGroup, Transition, TransitionChild } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 
-const sandwiches = [
+const desserts = [
   {
     id: 1,
-    name: 'Croissant de mantequilla',
+    name: 'Vegetable apple crisp',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/CROISSANT_DE_MANTEQUILLA_V2.png',
-    imageAlt: 'Alimento',
-    price: 'S/ 5.50',
-    description: 'Croissant de mantequilla. Porción individual.Imágenes referenciales.',
-    inStock: false,
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/CROCANTE_DE_MANZANA_VEGETAL_202303071258380326.PNG',
+    imageAlt: 'Food',
+    price: '$4.00',
+    description: 'Apple filling mixed with chestnuts and pecans, sweetened with panela, wrapped in a sweet wheat flour dough and topped with vegan crumble with oat flakes. Images for reference.',
+    inStock: true,
   },
   {
     id: 2,
-    name: 'Croissant de Jamón Serrano y Queso',
+    name: 'Vanilla Cake Pop',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/CROISSANT_DE_JAMON_SERRANO_Y_QUESO_202303061814451866.PNG',
-    imageAlt: 'Alimento',
-    price: 'S/ 15.50',
-    description: 'Delicioso sandwich realizado con nuestro croissant francés horneado en tienda, relleno con láminas de jamón serrano y queso andino.',
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/Cake_Pop_V1.png',
+    imageAlt: 'Food',
+    price: '$2.00',
+    description: 'Vanilla-flavoured sponge cake filled with manjar and coated in chocolate icing with sprinkles. No added sugar. Images for reference.',
     inStock: true,
   },
   {
     id: 3,
-    name: 'Croissant jamón del país y queso',
+    name: 'Cheesecake de Chocolate',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/croissant_jamon_pais_v3.png',
-    imageAlt: 'Alimento',
-    price: 'S/ 15.50',
-    description: 'Delicioso sandwich realizado con nuestro croissant francés horneado en tienda, relleno con láminas de jamón del país y queso andino.',
-    inStock: true,
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/CHEESECAKE_DE_CHOCOLATE_V2.png',
+    imageAlt: 'Food',
+    price: '$4.00',
+    description: 'Cheesecake with double chocolate biscuit base, vanilla flavoured cream, topped with bitter topping, decorated with whipped cream, brownie and hazelnut cream. Individual portion. Reference images.',
+    inStock: false,
   },
 ]
 
@@ -39,25 +39,27 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-function Sandwiches() {
-  const [open, setOpen] = useState(false)
-  const [selectedSandwiche, setSelectedSandwiche] = useState(sandwiches[0])
-  const [selectedPrice, setSelectedPrice] = useState(sandwiches[0].price)
 
-  const handleSandwicheClick = (sandwiche) => {
-    setSelectedSandwiche(sandwiche)
-    setSelectedPrice(sandwiche.price)
+function Desserts() {
+  const [open, setOpen] = useState(false)
+  const [selectedDessert, setSelectedDessert] = useState(desserts[0])
+  const [selectedPrice, setSelectedPrice] = useState(desserts[0].price)
+
+  const handleDessertClick = (dessert) => {
+    setSelectedDessert(dessert)
+    setSelectedPrice(dessert.price)
     setOpen(true)
   }
+
   return (
     <div className='flex flex-col justify-between mx-auto max-w-2xl px-4 py-1 sm:px-6 sm:py-10 lg:max-w-7xl lg:px-8'>
       <div className='mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-20'>
-        {sandwiches.map((sandwiche) => (
-          <div key={sandwiche.id} className='group relative flex' onClick={() => handleSandwicheClick(sandwiche)}>
+        {desserts.map((dessert) => (
+          <div key={dessert.id} className='group relative flex' onClick={() => handleDessertClick(dessert)}>
             <div className='flex-shrink-0 size-32 lg:h-60 lg:w-60 overflow-hidden'>
               <img
-                src={sandwiche.imageSrc}
-                alt={sandwiche.imageAlt}
+                src={dessert.imageSrc}
+                alt={dessert.imageAlt}
                 className='h-full w-full object-cover object-center'
               />
             </div>
@@ -65,10 +67,10 @@ function Sandwiches() {
               <h3 className='text-gray-700 text-base font-bold font-opensans'>
                 <a className='hover:text-orange-500 cursor-pointer'>
                   <span aria-hidden='true' className='absolute inset-0' />
-                  {sandwiche.name}
+                  {dessert.name}
                 </a>
               </h3>
-              <p className='text-gray-900 text-sm font-semibold font-opensans'>{sandwiche.price}</p>
+              <p className='text-gray-900 text-sm font-semibold font-opensans'>{dessert.price}</p>
             </div>
           </div>
         ))}
@@ -110,38 +112,38 @@ function Sandwiches() {
                     <div className='grid grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8 w-full'>
                       <div className='flex-shrink-0 size-60 lg:h-full lg:w-full overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5 flex items-center justify-center mx-auto'>
                         <img
-                          src={selectedSandwiche.imageSrc}
-                          alt={selectedSandwiche.imageAlt}
+                          src={selectedDessert.imageSrc}
+                          alt={selectedDessert.imageAlt}
                           className='object-cover object-center size-full lg:size-auto'
                         />
                       </div>
                       <div className='sm:col-span-8 lg:col-span-7'>
-                        <h2 className='text-2xl font-bold text-gray-900 sm:pr-12'>{selectedSandwiche.name}</h2>
+                        <h2 className='text-2xl font-bold text-gray-900 sm:pr-12'>{selectedDessert.name}</h2>
 
                         <section aria-labelledby='information-heading' className='mt-2'>
                           <h3 id='information-heading' className='sr-only'>
-                            Sandwiche information
+                           Dessert information
                           </h3>
-                          <p className='text-sm text-gray-900 lg:text-lg'>{selectedSandwiche.description}</p>
+                          <p className='text-sm text-gray-900 lg:text-lg'>{selectedDessert.description}</p>
                         </section>
 
                         <section aria-labelledby='options-heading' className='mt-10'>
                           <form>
                             {/* Price */}
                             <fieldset aria-label='Choose a price'>
-                              <legend className='text-sm font-medium text-gray-900'>Precio</legend>
+                              <legend className='text-sm font-medium text-gray-900'>Price</legend>
                               <RadioGroup
                                 value={selectedPrice}
                                 onChange={setSelectedPrice}
                                 className='mt-4 flex justify-around space-x-3'
                               >
                                 <Radio
-                                  key={selectedSandwiche.name}
-                                  value={selectedSandwiche.price}
-                                  disabled={!selectedSandwiche.inStock}
+                                  key={selectedDessert.name}
+                                  value={selectedDessert.price}
+                                  disabled={!selectedDessert.inStock}
                                   className={({ focus }) =>
                                     classNames(
-                                      selectedSandwiche.inStock
+                                      selectedDessert.inStock
                                         ? 'cursor-pointer bg-white text-gray-900 shadow-sm'
                                         : 'cursor-not-allowed bg-gray-50 text-gray-200',
                                       focus ? 'ring-2 ring-indigo-500' : '',
@@ -153,10 +155,10 @@ function Sandwiches() {
                                     <>
                                       <div className='text-center' aria-hidden='true'>
                                         <h3 className='text-sm text-gray-700'>
-                                          {selectedSandwiche.price}
+                                          {selectedDessert.price}
                                         </h3>
                                       </div>
-                                      {selectedSandwiche.inStock ? (
+                                      {selectedDessert.inStock ? (
                                         <span
                                           className={classNames(
                                             checked ? 'border-orange-500' : 'border-transparent',
@@ -190,7 +192,7 @@ function Sandwiches() {
                               type='submit'
                               className='mt-6 flex w-full items-center justify-center rounded-md border border-transparent bg-orange-500 px-8 py-3 text-base font-medium text-white hover:bg-orange-600 focus-none'
                             >
-                              Add to bag
+                              Add to cart
                             </button>
                           </form>
                         </section>
@@ -207,4 +209,4 @@ function Sandwiches() {
   )
 }
 
-export default Sandwiches
+export default Desserts

@@ -2,35 +2,35 @@ import { useState } from 'react'
 import { Dialog, DialogPanel, Radio, RadioGroup, Transition, TransitionChild } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 
-const pastries = [
+const wholeBean = [
   {
     id: 1,
-    name: 'Muffin de Naranja',
+    name: 'Peru',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/MUFFIN_DE_NARANJA_Y_CHOCOCHIPS_V2.png',
-    imageAlt: 'Alimento',
-    price: 'S/ 9.00',
-    description: 'Muffin realizado con harina de trigo, aceite vegetal, huevos, jugo de naranja, ralladura de naranja, cobertura bitter, margarina, azucar, escencia de vainilla y naranja. Porción individual. Imágenes referenciales.',
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/PERU_202405130911227975.PNG',
+    imageAlt: 'WholeBean',
+    price: '$10.00',
+    description: 'Bag of coffee beans of 250 gr. Herbal and nutty notes, mainly almond; medium roast, medium acidity and full body.',
     inStock: true,
   },
   {
     id: 2,
-    name: 'Keke de zanahoria',
+    name: 'Espresso Roast',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/KEKE_DE_ZANAHORIA_V2.png',
-    imageAlt: 'Alimento',
-    price: 'S/ 9.00',
-    description: 'Muffin realizado con harina de trigo, aceite vegetal, huevos, jugo de naranja, ralladura de naranja, cobertura bitter, margarina, azucar, escencia de vainilla y naranja. Porción individual. Imágenes referenciales.',
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/ESPRESSO_250_GR_202405130906146272.PNG',
+    imageAlt: 'WholeBean',
+    price: '$10.00',
+    description: 'Bag of coffee beans of 250 gr. Herbal and nutty notes, mainly almond; medium roast, medium acidity and full body.',
     inStock: false,
   },
   {
     id: 3,
-    name: 'Galleta cranberry',
+    name: 'Verona',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/GALLETA_DE_CRANBERRIES_V2.png',
-    imageAlt: 'Alimento',
-    price: 'S/ 5.50',
-    description: 'Muffin realizado con harina de trigo, aceite vegetal, huevos, jugo de naranja, ralladura de naranja, cobertura bitter, margarina, azucar, escencia de vainilla y naranja. Porción individual. Imágenes referenciales.',
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/VERONA_202405130913058459.PNG',
+    imageAlt: 'WholeBean',
+    price: '$10.00',
+    description: 'Bag of coffee beans of 250 gr. Herbal and nutty notes, mainly almond; medium roast, medium acidity and full body.',
     inStock: true,
   },
 ]
@@ -39,26 +39,26 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-function Pastries() {
+function WholeBean() {
   const [open, setOpen] = useState(false)
-  const [selectedPastrie, setSelectedPastrie] = useState(pastries[0])
-  const [selectedPrice, setSelectedPrice] = useState(pastries[0].price)
+  const [selectedCoffeeBeans, setSelectedCoffeeBeans] = useState(wholeBean[0])
+  const [selectedPrice, setSelectedPrice] = useState(wholeBean[0].price)
 
-  const handlePastrieClick = (pastrie) => {
-    setSelectedPastrie(pastrie)
-    setSelectedPrice(pastrie.price)
+  const handleCoffeeBeansClick = (coffeeBeans) => {
+    setSelectedCoffeeBeans(coffeeBeans)
+    setSelectedPrice(coffeeBeans.price)
     setOpen(true)
   }
 
   return (
     <div className='flex flex-col justify-between mx-auto max-w-2xl px-4 py-1 sm:px-6 sm:py-10 lg:max-w-7xl lg:px-8'>
       <div className='mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-20'>
-        {pastries.map((pastrie) => (
-          <div key={pastrie.id} className='group relative flex' onClick={() => handlePastrieClick(pastrie)}>
+        {wholeBean.map((coffeeBeans) => (
+          <div key={coffeeBeans.id} className='group relative flex' onClick={() => handleCoffeeBeansClick(coffeeBeans)}>
             <div className='flex-shrink-0 size-32 lg:h-60 lg:w-60 overflow-hidden'>
               <img
-                src={pastrie.imageSrc}
-                alt={pastrie.imageAlt}
+                src={coffeeBeans.imageSrc}
+                alt={coffeeBeans.imageAlt}
                 className='h-full w-full object-cover object-center'
               />
             </div>
@@ -66,10 +66,10 @@ function Pastries() {
               <h3 className='text-gray-700 text-base font-bold font-opensans'>
                 <a className='hover:text-orange-500 cursor-pointer'>
                   <span aria-hidden='true' className='absolute inset-0' />
-                  {pastrie.name}
+                  {coffeeBeans.name}
                 </a>
               </h3>
-              <p className='text-gray-900 text-sm font-semibold font-opensans'>{pastrie.price}</p>
+              <p className='text-gray-900 text-sm font-semibold font-opensans'>{coffeeBeans.price}</p>
             </div>
           </div>
         ))}
@@ -111,38 +111,38 @@ function Pastries() {
                     <div className='grid grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8 w-full'>
                       <div className='flex-shrink-0 size-60 lg:h-full lg:w-full overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5 flex items-center justify-center mx-auto'>
                         <img
-                          src={selectedPastrie.imageSrc}
-                          alt={selectedPastrie.imageAlt}
+                          src={selectedCoffeeBeans.imageSrc}
+                          alt={selectedCoffeeBeans.imageAlt}
                           className='object-cover object-center size-full lg:size-auto'
                         />
                       </div>
                       <div className='sm:col-span-8 lg:col-span-7'>
-                        <h2 className='text-2xl font-bold text-gray-900 sm:pr-12'>{selectedPastrie.name}</h2>
+                        <h2 className='text-2xl font-bold text-gray-900 sm:pr-12'>{selectedCoffeeBeans.name}</h2>
 
                         <section aria-labelledby='information-heading' className='mt-2'>
                           <h3 id='information-heading' className='sr-only'>
-                            Pastrie information
+                            Whole bean information
                           </h3>
-                          <p className='text-sm text-gray-900 lg:text-lg'>{selectedPastrie.description}</p>
+                          <p className='text-sm text-gray-900 lg:text-lg'>{selectedCoffeeBeans.description}</p>
                         </section>
 
                         <section aria-labelledby='options-heading' className='mt-10'>
                           <form>
                             {/* Price */}
                             <fieldset aria-label='Choose a price'>
-                              <legend className='text-sm font-medium text-gray-900'>Precio</legend>
+                              <legend className='text-sm font-medium text-gray-900'>Price</legend>
                               <RadioGroup
                                 value={selectedPrice}
                                 onChange={setSelectedPrice}
                                 className='mt-4 flex justify-around space-x-3'
                               >
                                 <Radio
-                                  key={selectedPastrie.name}
-                                  value={selectedPastrie.price}
-                                  disabled={!selectedPastrie.inStock}
+                                  key={selectedCoffeeBeans.name}
+                                  value={selectedCoffeeBeans.price}
+                                  disabled={!selectedCoffeeBeans.inStock}
                                   className={({ focus }) =>
                                     classNames(
-                                      selectedPastrie.inStock
+                                      selectedCoffeeBeans.inStock
                                         ? 'cursor-pointer bg-white text-gray-900 shadow-sm'
                                         : 'cursor-not-allowed bg-gray-50 text-gray-200',
                                       focus ? 'ring-2 ring-indigo-500' : '',
@@ -154,10 +154,10 @@ function Pastries() {
                                     <>
                                       <div className='text-center' aria-hidden='true'>
                                         <h3 className='text-sm text-gray-700'>
-                                          {selectedPastrie.price}
+                                          {selectedCoffeeBeans.price}
                                         </h3>
                                       </div>
-                                      {selectedPastrie.inStock ? (
+                                      {selectedCoffeeBeans.inStock ? (
                                         <span
                                           className={classNames(
                                             checked ? 'border-orange-500' : 'border-transparent',
@@ -191,7 +191,7 @@ function Pastries() {
                               type='submit'
                               className='mt-6 flex w-full items-center justify-center rounded-md border border-transparent bg-orange-500 px-8 py-3 text-base font-medium text-white hover:bg-orange-600 focus-none'
                             >
-                              Add to bag
+                              Add to cart
                             </button>
                           </form>
                         </section>
@@ -208,4 +208,4 @@ function Pastries() {
   )
 }
 
-export default Pastries
+export default WholeBean

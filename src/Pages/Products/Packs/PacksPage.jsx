@@ -29,7 +29,7 @@ function PacksPage() {
                   <li>
                     <div>
                       <Link to={'/ecommerce/section/menu'} className='text-base font-semibold font-opensans text-gray-500 hover:text-orange-500'>
-                        Menú
+                        Menu
                       </Link>
                     </div>
                   </li>
@@ -37,7 +37,7 @@ function PacksPage() {
                     <div className='flex items-center'>
                       <ChevronRightIcon className='h-5 w-5 flex-shrink-0 text-gray-400' aria-hidden='true' />
                       <a className='ml-4 text-base text-gray-600 font-bold font-opensans'>
-                        Packs y Boxes
+                        Packs and Boxes
                       </a>
                     </div>
                   </li>
@@ -49,27 +49,27 @@ function PacksPage() {
 
         <div className='bg-white border-gray-200 lg:border-l'>
           <div id='Coffee-for-share' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
-            <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-xl sm:tracking-tight'>
-              COFFEE FOR SHARE
+            <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
+              Coffee for share
             </h1>
           </div>
           {/* COFFEE FOR SHARE */}
           <CoffeesShare />
 
-          <div id='antojos-de-la-tarde' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
-            <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-xl sm:tracking-tight'>
-              ANTOJOS DE LA TARDE
+          <div id='afternoon-cravings' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
+            <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
+              Afternoon cravings
             </h1>
           </div>
-          {/* ANTOJOS DE LA TARDE */}
+          {/* AFTERNOON CRAVINGS */}
           <AntojosTarde />
 
-          <div id='desayunos' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
-            <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-xl sm:tracking-tight'>
-              DESAYUNOS
+          <div id='breakfast' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
+            <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
+              Breakfast
             </h1>
           </div>
-          {/* DESAYUNOS*/}
+          {/* BREAKFAST */}
           <Desayunos />
         </div>
       </div>

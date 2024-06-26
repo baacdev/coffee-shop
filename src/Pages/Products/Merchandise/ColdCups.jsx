@@ -2,36 +2,36 @@ import { useState } from 'react'
 import { Dialog, DialogPanel, Radio, RadioGroup, Transition, TransitionChild } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 
-const postres = [
+const merchandise = [
   {
     id: 1,
-    name: 'Crocante de manzana vegetal',
+    name: 'White Mermaid Reusable White Cup - 16 oz',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/CROCANTE_DE_MANZANA_VEGETAL_202303071258380326.PNG',
-    imageAlt: 'Alimento',
-    price: 'S/ 15.00',
-    description: 'Relleno de manzana mezclado con castañas y pecanas, endulzado con panela, envuelto en una dulce masa de harina de trigo y cubierta con crumble vegano con hojuelas de avena. Imágenes referenciales.',
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/VASO_REUSABLE_BLANCO_16OZ_202303071248009818.PNG',
+    imageAlt: 'Merchandise',
+    price: '$9.00',
+    description: '011129110 - Siren White Reusable White Cup - 16 ox',
     inStock: true,
   },
   {
     id: 2,
-    name: 'Cake Pop Vainilla',
+    name: 'Siren Green Reusable White Tumbler - 16 oz',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/Cake_Pop_V1.png',
-    imageAlt: 'Alimento',
-    price: 'S/ 6.50',
-    description: 'Bizcocho sabor a vainilla relleno de manjar y bañado en chocolate de cobertura con grageas. Sin azúcar adicional. Imágenes referenciales.',
-    inStock: true,
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/VASO_REUSABLE_BLANCO_SIRENA_VERDE_16OZ_202303071252078126.PNG',
+    imageAlt: 'Merchandise',
+    price: '$9.00',
+    description: 'Siren Green Reusable White Tumbler - 16 oz',
+    inStock: false,
   },
   {
     id: 3,
-    name: 'Cheesecake de Chocolate',
+    name: 'Reusable Cold Cup 24 oz',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/CHEESECAKE_DE_CHOCOLATE_V2.png',
-    imageAlt: 'Alimento',
-    price: 'S/ 15.00',
-    description: 'Cheesecake con base de doble galleta de chocolate, crema sabor a vainilla, cubierto con cobertura bitter, decorado con crema chantilly, brownie y crema de avellanas. Porción individual. Imágenes referenciales.',
-    inStock: false,
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/VASO_REUSABLE_FRIO_24OZ_202303071254370179.PNG',
+    imageAlt: 'Merchandise',
+    price: '$10.00',
+    description: 'Reusable Cold Cup 24 oz',
+    inStock: true,
   },
 ]
 
@@ -40,25 +40,26 @@ function classNames(...classes) {
 }
 
 
-function Postres() {
+function ColdCups() {
   const [open, setOpen] = useState(false)
-  const [selectedPostre, setSelectedPostre] = useState(postres[0])
-  const [selectedPrice, setSelectedPrice] = useState(postres[0].price)
+  const [selectedMerchandise, setSelectedMerchandise] = useState(merchandise[0])
+  const [selectedPrice, setSelectedPrice] = useState(merchandise[0].price)
 
-  const handlePostreClick = (postre) => {
-    setSelectedPostre(postre)
-    setSelectedPrice(postre.price)
+  const handleMerchandiseClick = (item) => {
+    setSelectedMerchandise(item)
+    setSelectedPrice(item.price)
     setOpen(true)
   }
+
   return (
     <div className='flex flex-col justify-between mx-auto max-w-2xl px-4 py-1 sm:px-6 sm:py-10 lg:max-w-7xl lg:px-8'>
       <div className='mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-20'>
-        {postres.map((postre) => (
-          <div key={postre.id} className='group relative flex' onClick={() => handlePostreClick(postre)}>
+        {merchandise.map((item) => (
+          <div key={item.id} className='group relative flex' onClick={() => handleMerchandiseClick(item)}>
             <div className='flex-shrink-0 size-32 lg:h-60 lg:w-60 overflow-hidden'>
               <img
-                src={postre.imageSrc}
-                alt={postre.imageAlt}
+                src={item.imageSrc}
+                alt={item.imageAlt}
                 className='h-full w-full object-cover object-center'
               />
             </div>
@@ -66,10 +67,10 @@ function Postres() {
               <h3 className='text-gray-700 text-base font-bold font-opensans'>
                 <a className='hover:text-orange-500 cursor-pointer'>
                   <span aria-hidden='true' className='absolute inset-0' />
-                  {postre.name}
+                  {item.name}
                 </a>
               </h3>
-              <p className='text-gray-900 text-sm font-semibold font-opensans'>{postre.price}</p>
+              <p className='text-gray-900 text-sm font-semibold font-opensans'>{item.price}</p>
             </div>
           </div>
         ))}
@@ -111,38 +112,38 @@ function Postres() {
                     <div className='grid grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8 w-full'>
                       <div className='flex-shrink-0 size-60 lg:h-full lg:w-full overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5 flex items-center justify-center mx-auto'>
                         <img
-                          src={selectedPostre.imageSrc}
-                          alt={selectedPostre.imageAlt}
+                          src={selectedMerchandise.imageSrc}
+                          alt={selectedMerchandise.imageAlt}
                           className='object-cover object-center size-full lg:size-auto'
                         />
                       </div>
                       <div className='sm:col-span-8 lg:col-span-7'>
-                        <h2 className='text-2xl font-bold text-gray-900 sm:pr-12'>{selectedPostre.name}</h2>
+                        <h2 className='text-2xl font-bold text-gray-900 sm:pr-12'>{selectedMerchandise.name}</h2>
 
                         <section aria-labelledby='information-heading' className='mt-2'>
                           <h3 id='information-heading' className='sr-only'>
-                            Postre information
+                            Merchandise information
                           </h3>
-                          <p className='text-sm text-gray-900 lg:text-lg'>{selectedPostre.description}</p>
+                          <p className='text-sm text-gray-900 lg:text-lg'>{selectedMerchandise.description}</p>
                         </section>
 
                         <section aria-labelledby='options-heading' className='mt-10'>
                           <form>
                             {/* Price */}
                             <fieldset aria-label='Choose a price'>
-                              <legend className='text-sm font-medium text-gray-900'>Precio</legend>
+                              <legend className='text-sm font-medium text-gray-900'>Price</legend>
                               <RadioGroup
                                 value={selectedPrice}
                                 onChange={setSelectedPrice}
                                 className='mt-4 flex justify-around space-x-3'
                               >
                                 <Radio
-                                  key={selectedPostre.name}
-                                  value={selectedPostre.price}
-                                  disabled={!selectedPostre.inStock}
+                                  key={selectedMerchandise.name}
+                                  value={selectedMerchandise.price}
+                                  disabled={!selectedMerchandise.inStock}
                                   className={({ focus }) =>
                                     classNames(
-                                      selectedPostre.inStock
+                                      selectedMerchandise.inStock
                                         ? 'cursor-pointer bg-white text-gray-900 shadow-sm'
                                         : 'cursor-not-allowed bg-gray-50 text-gray-200',
                                       focus ? 'ring-2 ring-indigo-500' : '',
@@ -154,10 +155,10 @@ function Postres() {
                                     <>
                                       <div className='text-center' aria-hidden='true'>
                                         <h3 className='text-sm text-gray-700'>
-                                          {selectedPostre.price}
+                                          {selectedMerchandise.price}
                                         </h3>
                                       </div>
-                                      {selectedPostre.inStock ? (
+                                      {selectedMerchandise.inStock ? (
                                         <span
                                           className={classNames(
                                             checked ? 'border-orange-500' : 'border-transparent',
@@ -191,7 +192,7 @@ function Postres() {
                               type='submit'
                               className='mt-6 flex w-full items-center justify-center rounded-md border border-transparent bg-orange-500 px-8 py-3 text-base font-medium text-white hover:bg-orange-600 focus-none'
                             >
-                              Add to bag
+                              Add to cart
                             </button>
                           </form>
                         </section>
@@ -208,4 +209,4 @@ function Postres() {
   )
 }
 
-export default Postres
+export default ColdCups

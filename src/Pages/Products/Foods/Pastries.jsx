@@ -2,35 +2,35 @@ import { useState } from 'react'
 import { Dialog, DialogPanel, Radio, RadioGroup, Transition, TransitionChild } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 
-const cafesGrano = [
+const pastries = [
   {
     id: 1,
-    name: 'Perú',
+    name: 'Orange Muffin',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/PERU_202405130911227975.PNG',
-    imageAlt: 'Mercancia',
-    price: 'S/ 37.00',
-    description: 'Bolsa de café en grano de 250 gr. Notas herbales y a frutos secos principalmente la almendra; con tostado medio, acidez media y cuerpo completo.',
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/MUFFIN_DE_NARANJA_Y_CHOCOCHIPS_V2.png',
+    imageAlt: 'Food',
+    price: '$3.00',
+    description: 'Muffin made with wheat flour, vegetable oil, eggs, orange juice, orange zest, bitter topping, margarine, sugar, vanilla and orange essence. Single portion. Reference images.',
     inStock: true,
   },
   {
     id: 2,
-    name: 'Espresso Roast',
+    name: 'Carrot keke',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/ESPRESSO_250_GR_202405130906146272.PNG',
-    imageAlt: 'Mercancia',
-    price: 'S/ 37.00',
-    description: 'Bolsa de café en grano de 250 gr. Notas herbales y a frutos secos principalmente la almendra; con tostado medio, acidez media y cuerpo completo.',
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/KEKE_DE_ZANAHORIA_V2.png',
+    imageAlt: 'Food',
+    price: '$3.00',
+    description: 'Muffin made with wheat flour, vegetable oil, eggs, orange juice, orange zest, bitter topping, margarine, sugar, vanilla and orange essence. Single portion. Reference images.',
     inStock: false,
   },
   {
     id: 3,
-    name: 'Verona',
+    name: 'Blueberry biscuit',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/VERONA_202405130913058459.PNG',
-    imageAlt: 'Mercancia',
-    price: 'S/ 37.00',
-    description: 'Bolsa de café en grano de 250 gr. Notas herbales y a frutos secos principalmente la almendra; con tostado medio, acidez media y cuerpo completo.',
+    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/GALLETA_DE_CRANBERRIES_V2.png',
+    imageAlt: 'Food',
+    price: '$2.00',
+    description: 'Muffin made with wheat flour, vegetable oil, eggs, orange juice, orange zest, bitter topping, margarine, sugar, vanilla and orange essence. Single portion. Reference images.',
     inStock: true,
   },
 ]
@@ -39,25 +39,26 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-function CafesGrano() {
+function Pastries() {
   const [open, setOpen] = useState(false)
-  const [selectedCafeGrano, setSelectedCafeGrano] = useState(cafesGrano[0])
-  const [selectedPrice, setSelectedPrice] = useState(cafesGrano[0].price)
+  const [selectedPastries, setSelectedPastries] = useState(pastries[0])
+  const [selectedPrice, setSelectedPrice] = useState(pastries[0].price)
 
-  const handleCafeGranoClick = (cafeGrano) => {
-    setSelectedCafeGrano(cafeGrano)
-    setSelectedPrice(cafeGrano.price)
+  const handlePastriesClick = (cake) => {
+    setSelectedPastries(cake)
+    setSelectedPrice(cake.price)
     setOpen(true)
   }
+
   return (
     <div className='flex flex-col justify-between mx-auto max-w-2xl px-4 py-1 sm:px-6 sm:py-10 lg:max-w-7xl lg:px-8'>
       <div className='mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-20'>
-        {cafesGrano.map((cafeGrano) => (
-          <div key={cafeGrano.id} className='group relative flex' onClick={() => handleCafeGranoClick(cafeGrano)}>
+        {pastries.map((cake) => (
+          <div key={cake.id} className='group relative flex' onClick={() => handlePastriesClick(cake)}>
             <div className='flex-shrink-0 size-32 lg:h-60 lg:w-60 overflow-hidden'>
               <img
-                src={cafeGrano.imageSrc}
-                alt={cafeGrano.imageAlt}
+                src={cake.imageSrc}
+                alt={cake.imageAlt}
                 className='h-full w-full object-cover object-center'
               />
             </div>
@@ -65,10 +66,10 @@ function CafesGrano() {
               <h3 className='text-gray-700 text-base font-bold font-opensans'>
                 <a className='hover:text-orange-500 cursor-pointer'>
                   <span aria-hidden='true' className='absolute inset-0' />
-                  {cafeGrano.name}
+                  {cake.name}
                 </a>
               </h3>
-              <p className='text-gray-900 text-sm font-semibold font-opensans'>{cafeGrano.price}</p>
+              <p className='text-gray-900 text-sm font-semibold font-opensans'>{cake.price}</p>
             </div>
           </div>
         ))}
@@ -110,38 +111,38 @@ function CafesGrano() {
                     <div className='grid grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8 w-full'>
                       <div className='flex-shrink-0 size-60 lg:h-full lg:w-full overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5 flex items-center justify-center mx-auto'>
                         <img
-                          src={selectedCafeGrano.imageSrc}
-                          alt={selectedCafeGrano.imageAlt}
+                          src={selectedPastries.imageSrc}
+                          alt={selectedPastries.imageAlt}
                           className='object-cover object-center size-full lg:size-auto'
                         />
                       </div>
                       <div className='sm:col-span-8 lg:col-span-7'>
-                        <h2 className='text-2xl font-bold text-gray-900 sm:pr-12'>{selectedCafeGrano.name}</h2>
+                        <h2 className='text-2xl font-bold text-gray-900 sm:pr-12'>{selectedPastries.name}</h2>
 
                         <section aria-labelledby='information-heading' className='mt-2'>
                           <h3 id='information-heading' className='sr-only'>
-                            Cafe Grano information
+                            Pastries information
                           </h3>
-                          <p className='text-sm text-gray-900 lg:text-lg'>{selectedCafeGrano.description}</p>
+                          <p className='text-sm text-gray-900 lg:text-lg'>{selectedPastries.description}</p>
                         </section>
 
                         <section aria-labelledby='options-heading' className='mt-10'>
                           <form>
                             {/* Price */}
                             <fieldset aria-label='Choose a price'>
-                              <legend className='text-sm font-medium text-gray-900'>Precio</legend>
+                              <legend className='text-sm font-medium text-gray-900'>Price</legend>
                               <RadioGroup
                                 value={selectedPrice}
                                 onChange={setSelectedPrice}
                                 className='mt-4 flex justify-around space-x-3'
                               >
                                 <Radio
-                                  key={selectedCafeGrano.name}
-                                  value={selectedCafeGrano.price}
-                                  disabled={!selectedCafeGrano.inStock}
+                                  key={selectedPastries.name}
+                                  value={selectedPastries.price}
+                                  disabled={!selectedPastries.inStock}
                                   className={({ focus }) =>
                                     classNames(
-                                      selectedCafeGrano.inStock
+                                      selectedPastries.inStock
                                         ? 'cursor-pointer bg-white text-gray-900 shadow-sm'
                                         : 'cursor-not-allowed bg-gray-50 text-gray-200',
                                       focus ? 'ring-2 ring-indigo-500' : '',
@@ -153,10 +154,10 @@ function CafesGrano() {
                                     <>
                                       <div className='text-center' aria-hidden='true'>
                                         <h3 className='text-sm text-gray-700'>
-                                          {selectedCafeGrano.price}
+                                          {selectedPastries.price}
                                         </h3>
                                       </div>
-                                      {selectedCafeGrano.inStock ? (
+                                      {selectedPastries.inStock ? (
                                         <span
                                           className={classNames(
                                             checked ? 'border-orange-500' : 'border-transparent',
@@ -190,7 +191,7 @@ function CafesGrano() {
                               type='submit'
                               className='mt-6 flex w-full items-center justify-center rounded-md border border-transparent bg-orange-500 px-8 py-3 text-base font-medium text-white hover:bg-orange-600 focus-none'
                             >
-                              Add to bag
+                              Add to cart
                             </button>
                           </form>
                         </section>
@@ -207,4 +208,4 @@ function CafesGrano() {
   )
 }
 
-export default CafesGrano
+export default Pastries
