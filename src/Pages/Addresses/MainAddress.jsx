@@ -15,11 +15,11 @@ const addresses = [
 function MainAddress() {
   return (
     <div className="flex min-h-[90vh] bg-white items-center">
-      <div className="bg-white mt-10 mb-10 mx-auto max-w-2xl flex flex-col gap-y-16 px-4 lg:max-w-7xl">
+      <div className="bg-white mt-10 mb-10  mx-auto max-w-2xl px-4 lg:max-w-7xl">
         {addresses.map((address) => (
           <div key={address.id} className="flex flex-col lg:flex-row items-center">
             <div className="text-center lg:text-left lg:w-1/2">
-              <h2 className="mt-3 text-3xl font-bold font-opensans tracking-tight text-black sm:text-5xl sm:mt-0">
+              <h2 className="mt-3 text-3xl font-bold font-opensans text-black sm:text-5xl sm:mt-0">
                 {address.name}
               </h2>
               <p className="mt-5 text-black text-lg font-bold font-opensans">

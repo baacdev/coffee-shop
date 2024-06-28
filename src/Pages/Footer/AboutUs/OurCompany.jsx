@@ -7,7 +7,7 @@ function OurCompany() {
         <div className="mx-auto max-w-2xl py-10 lg:max-w-none">
           <div className="space-y-12">
             <div className="group relative">
-              <h1 className="text-2xl lg:text-5xl font-black font-opensans text-gray-900 mb-8">Nuestra compañía</h1>
+              <h1 className="text-2xl lg:text-5xl font-black font-opensans text-gray-900 mb-8">Our company</h1>
               <div className="relative overflow-hidden rounded-lg bg-white lg:aspect-h-1 lg:aspect-w-2">
                 <img
                   src='https://cdn.panampost.com/wp-content/uploads/2023/05/Cafeteria.jpg'
@@ -15,7 +15,7 @@ function OurCompany() {
                 />
               </div>
               <h2 className="text-xl lg:text-4xl font-black font-opensans text-gray-900 mt-8 mb-5">
-                Nuestro legado
+              Our legacy
               </h2>
               <p className="text-base lg:text-lg font-medium font-opensans text-gray-900">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint distinctio placeat, dignissimos necessitatibus neque debitis facilis iste quo magni commodi ipsa excepturi assumenda laborum dolorum. Magni ipsam minus repellat quos.

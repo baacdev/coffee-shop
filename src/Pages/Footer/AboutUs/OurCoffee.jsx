@@ -7,7 +7,7 @@ function OurCoffee() {
         <div className="mx-auto max-w-2xl py-10 lg:max-w-none">
           <div className="space-y-12">
             <div className="group relative">
-              <h1 className="text-2xl lg:text-5xl font-black font-opensans text-gray-900 mb-8">Hablemos de café</h1>
+              <h1 className="text-2xl lg:text-5xl font-black font-opensans text-gray-900 mb-8">Let's talk about coffee</h1>
               <div className="relative overflow-hidden rounded-lg bg-white lg:aspect-h-1 lg:aspect-w-2">
                 <img
                   src='https://cafesmoreno.com/wp-content/uploads/2022/07/descafeinado_web.jpg'

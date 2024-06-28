@@ -128,7 +128,7 @@ function Navbar() {
                   <span className='sr-only'>Your Company</span>
                   <img
                     className='h-16 w-auto'
-                    src='https://davirailustrador.com/wp-content/uploads/2022/10/monocromatico-elegante.webp'
+                    src='/assets/logos/logo.png'
                     alt=''
                   />
                 </Link>
