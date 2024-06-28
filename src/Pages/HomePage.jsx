@@ -8,7 +8,7 @@ const promotions = [
     description: 'Get to know the coffee methods and take home your favorite.',
     promotionStartDate: '',
     promotionEndDate: '',
-    href: '/ecommerce/section/menu/merch-y-cafe-en-grano/merch',
+    href: '/menu/merch-y-cafe-en-grano/merch',
     buttonName: 'Buy now',
     imageAlt: 'A coffee maker, tea maker, and glass pitcher arranged on a countertop.',
     imageSrc: '/assets/img/electrodomesticos.jpeg'
@@ -30,7 +30,7 @@ const promotions = [
     description: 'Order in store your perfect combination to start the day with joy and good taste.',
     promotionStartDate: '01-04-2024',
     promotionEndDate: '16-09-2024',
-    href: '/ecommerce/section/menu',
+    href: '/menu',
     buttonName: 'Learn more',
     imageAlt: 'Caramel apple latte in a Starbucks cup, topped with whipped cream and caramel drizzle.',
     imageSrc: '/assets/img/caremel_macchiato_bananaa_bread.jpg'
@@ -41,7 +41,7 @@ const promotions = [
     description: 'Enjoy our delicious coffee-free vanilla Frappuccino with mango dragon fruit.',
     promotionStartDate: '09-02-2024',
     promotionEndDate: '21-07-2024',
-    href: '/ecommerce/section/menu/bebidas/frappuccinos',
+    href: '/menu/bebidas/frappuccinos',
     buttonName: 'Learn more',
     imageAlt: 'Two glasses of pink milkshake topped with whipped cream, served in clear glassware.',
     imageSrc: '/assets/img/frappuccino-rosa.jpg'

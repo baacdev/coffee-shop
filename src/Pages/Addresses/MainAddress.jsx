@@ -4,11 +4,11 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/20/solid';
 const addresses = [
   {
     id: 1,
-    name: 'Ubicación',
-    description: 'Calle 159, San Martin de Socabaya - Arequipa',
-    reference: 'Al costado del gym',
-    buttonName: 'Abrir Google Maps',
-    imageSrc: 'https://c4.wallpaperflare.com/wallpaper/345/388/36/map-typography-colorful-world-wallpaper-preview.jpg',
+    name: 'Location',
+    description: 'Street 159, San Martin de Socabaya - Arequipa',
+    reference: 'Next to the gym',
+    buttonName: 'Open Google Maps',
+    imageSrc: '../../../public/assets/img/maps.webp',
   },
 ];
 
@@ -26,7 +26,7 @@ function MainAddress() {
                 {address.description}
               </p>
               <p className="mt-1 text-black text-base font-semibold font-opensans">
-                Referencia: {address.reference}
+              Reference: {address.reference}
               </p>
               <a
                 className="text-sm font-bold font-opensans text-white mt-10 w-full lg:w-1/2 mx-auto lg:mx-0 flex items-center justify-center rounded-md border border-transparent bg-orange-600 px-8 py-3 hover:bg-orange-700"
@@ -41,7 +41,7 @@ function MainAddress() {
             <div className="mt-5 lg:mt-0 lg:ml-10 lg:w-1/2 flex justify-center">
               <img
                 src={address.imageSrc}
-                alt="Imagen de promoción"
+                alt="Image of the site"
                 className="rounded-none bg-gray-100"
               />
             </div>

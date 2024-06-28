@@ -89,7 +89,7 @@ function Navbar() {
                       className='bg-transparent hover:bg-gray-200 text-gray-700 font-semibold py-1 px-4 border border-black rounded-full'
                       onClick={() => setOpen(false)}
                     >
-                      Log in
+                      Sign in
                     </Link>
                   </div>
                   <div className='flow-root'>

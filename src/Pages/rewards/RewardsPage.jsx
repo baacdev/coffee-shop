@@ -18,7 +18,7 @@ function RewardsPage() {
               Página de inicio
             </Link>
             <Link
-              to={'/ecommerce/section/menu'}
+              to={'/menu'}
               className="pt-10 text-sm font-semibold text-gray-900 font-opensans hover:-translate-y-1 hover:scale-100 duration-500"
             >
               Seguir comprando. <span aria-hidden="true">&rarr;</span>
