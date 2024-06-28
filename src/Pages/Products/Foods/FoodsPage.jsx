@@ -47,7 +47,7 @@ function FoodsPage() {
         </header>
 
         <div className='bg-white border-gray-200 lg:border-l'>
-          <div id='Pastries' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
+          <div id='pastries' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
             <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
               Pastries
             </h1>

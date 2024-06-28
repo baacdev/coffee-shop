@@ -5,7 +5,22 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    const excludedPaths = [
+      '/menu/drinks/frappuccinos', 
+      '/menu/drinks/hot-espresso',
+      '/menu/drinks/cold-espresso', 
+      '/menu/drinks/refreshers',
+      '/menu/drinks/shaken-espresso', 
+      '/menu/foods/pastries',
+      '/menu/foods/desserts',
+      '/menu/foods/sandwiches',
+      '/menu/merchandise/cold-cups',
+      '/menu/at-home-coffee/whole-bean',
+    ]; // excluded routes
+
+    if (!excludedPaths.includes(pathname)) {
+      window.scrollTo(0, 0);
+    }
   }, [pathname]);
 
   return null;
