@@ -14,19 +14,19 @@ function RegisterPage() {
       <div className='bg-white flex min-h-[90vh] flex-1 flex-col px-4 py-1 lg:px-8'>
         <div className='sm:mx-auto sm:w-full sm:max-w-sm text-center'>
           <h2 className='mt-10 text-center text-2xl font-black font-opensans leading-9 tracking-tight text-gray-900'>
-            Cree una cuenta
+            Create an account
           </h2>
         </div>
 
         <div className='mt-10 sm:mx-auto sm:w-full sm:max-w-sm'>
           <form className='space-y-4' action='#' method='POST'>
-            <a className='text-left text-sm font-bold font-opensanss tracking-tight text-gray-500'>
-              * indica campo obligatorio
+            <a className='text-left text-sm font-bold tracking-tight text-gray-500'>
+              * indicates required field
             </a>
             <div>
-              <h1 className='text-xl font-black font-opensans mb-4'>Información personal</h1>
+              <h1 className='text-xl font-black font-opensans mb-4'>Personal information</h1>
               <label htmlFor='firstName' className='text-gray-700 text-sm font-opensans font-black leading-6 block'>
-                * Nombres
+                * First names
               </label>
               <div className='mt-2'>
                 <input
@@ -41,7 +41,7 @@ function RegisterPage() {
             </div>
             <div>
               <label htmlFor='lastName' className='text-gray-700 text-sm font-opensans font-black leading-6 block'>
-                * Apellidos
+                * Last name
               </label>
               <div className='mt-2'>
                 <input
@@ -56,9 +56,9 @@ function RegisterPage() {
             </div>
 
             <div>
-              <h1 className='text-xl font-black font-opensans mt-10 mb-4'>Seguridad de la cuenta</h1>
+              <h1 className='text-xl font-black font-opensans mt-10 mb-4'>Account security</h1>
               <label htmlFor='email' className='text-gray-700 text-sm font-opensans font-black leading-6 block'>
-                * Dirección de correo electrónico
+                * Email address
               </label>
               <div className='mt-2'>
                 <input
@@ -75,7 +75,7 @@ function RegisterPage() {
             <div>
               <div className='flex items-center justify-between'>
                 <label htmlFor='password' className='text-gray-700 text-sm font-opensans font-black leading-6 block'>
-                  * Contraseña
+                  * Password
                 </label>
               </div>
               <div className='mt-2 mb-3 relative'>
@@ -93,8 +93,8 @@ function RegisterPage() {
                   </button>
                 </div>
               </div>
-              <a className='text-left text-sm font-bold font-opensanss tracking-tight text-gray-500'>
-                Crea una contraseña de 8 a 25 caracteres que incluya al menos 1 letra mayúscula y 1 minúscula, 1 número y 1 carácter especial como un signo de exclamación o un asterisco.
+              <a className='text-left text-sm font-bold tracking-tight text-gray-500'>
+                Create a password of 8 to 25 characters that includes at least 1 upper and 1 lower case letter, 1 number and 1 special character such as an exclamation mark or an asterisk.
               </a>
             </div>
 
@@ -103,15 +103,15 @@ function RegisterPage() {
                 type='submit'
                 className='shadow-lg bg-orange-800 w-fit ml-auto rounded-full border-none px-4 py-2 text-sm lg:text-base font-bold font-opensans text-gray-100 hover:bg-orange-900'
               >
-                Registrarme
+                Register
               </button>
             </div>
           </form>
           <div className='sm:mx-auto sm:w-full sm:max-w-sm text-left mb-10'>
             <p className='mt-10 text-sm font-semibold font-opensans text-gray-500'>
-              ¿Ya tienes una cuenta?{' '}
+              Already have an account?{' '}
               <Link to={'/account/login'} className='font-black underline underline-offset-2 text-orange-800 hover:text-orange-900'>
-                Inicia sesión
+                Sign in
               </Link>
             </p>
           </div>

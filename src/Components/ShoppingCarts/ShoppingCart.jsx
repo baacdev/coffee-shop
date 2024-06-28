@@ -4,45 +4,45 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 const orders = [
   {
     id: 1,
-    name: 'Muffin de Naranja',
+    name: 'Pineapple Cloud Cake',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/MUFFIN_DE_NARANJA_Y_CHOCOCHIPS_V2.png',
-    imageAlt: 'Alimento',
-    price: 'S/ 9.00',
-    description: 'Muffin realizado con harina de trigo, aceite vegetal, huevos, jugo de naranja, ralladura de naranja, cobertura bitter, margarina, azucar, escencia de vainilla y naranja. Porción individual. Imágenes referenciales.',
+    imageSrc: 'https://globalassets.starbucks.com/digitalassets/products/food/PineappleCloudCake.jpg?impolicy=1by1_medium_630',
+    imageAlt: 'Food',
+    price: '$3.00',
+    description: '240 calories.',
     inStock: true,
   },
   {
     id: 2,
-    name: 'Cake Pop Vainilla',
+    name: 'Double Chocolate Brownie',
     href: '#',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
-    imageAlt: 'Alimento',
-    price: 'S/ 6.50',
-    description: 'Muffin realizado con harina de trigo, aceite vegetal, huevos, jugo de naranja, ralladura de naranja, cobertura bitter, margarina, azucar, escencia de vainilla y naranja. Porción individual. Imágenes referenciales.',
+    imageSrc: 'https://globalassets.starbucks.com/digitalassets/products/food/SBX20190715_DoubleChocolateChunkBrownie.jpg?impolicy=1by1_medium_630',
+    imageAlt: 'Food',
+    price: '$2.50',
+    description: '480 calories',
     inStock: true,
   },
   {
     id: 3,
-    name: 'Retro Frappuccino',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/RETRO_FRAPPUCCINO_202405031709509334.PNG',
-    imageAlt: 'Bebida',
-    price: 'S/ 16.50',
-    description: 'Nuestro frappuccino peruano. Delicioso jarabe de algarrobina mezclada con leche y mocha; decorado con crema batida y topping de algarrobina. Imágenes referenciales.',
+    name: 'Mocha Cookie Crumble Frappuccino®',
+    imageSrc: 'https://globalassets.starbucks.com/digitalassets/products/bev/SBX20211210_MochaCookieCrumbleFrapp.jpg?impolicy=1by1_wide_topcrop_630',
+    imageAlt: 'Drink',
+    price: '$4.50',
+    description: '480 calories',
   },
   {
     id: 4,
     name: 'Cookies & Creme Frappuccino',
     imageSrc: 'https://www.starbucks.es/sites/starbucks-es/files/styles/c10_2_col_text_560x467/public/2021-11/Cookies%20%26%20Cream%20Frappuccino%C2%AE%20.jpeg.webp?itok=ROToAbHv',
-    imageAlt: 'Bebida',
-    price: 'S/ 16.50',
+    imageAlt: 'Drink',
+    price: '$4.00',
   },
   {
     id: 5,
     name: 'Chocolate Cookies & Creme Frappuccino',
     imageSrc: 'https://globalassets.starbucks.com/digitalassets/products/bev/SBX20190531_ChocolateCookieCrumbleFrappCreme.jpg?impolicy=1by1_wide_topcrop_630',
-    imageAlt: 'Bebida',
-    price: 'S/ 16.50',
+    imageAlt: 'Drink',
+    price: '$3.00',
   },
 ]
 
@@ -54,7 +54,7 @@ function ShoppingCart() {
   return (
     <div className='bg-white min-h-[100vh]'>
       <div className='pt-6'>
-        <h1 className='text-2xl text-center font-bold text-gray-900 font-opensans sm:text-3xl uppercase'>Carrito de compras</h1>
+        <h1 className='text-2xl text-center font-bold text-gray-900 font-opensans sm:text-3xl uppercase'>Shopping cart</h1>
         {/* Product info */}
         <div className='mx-auto max-w-2xl px-4 pb-5 pt-5 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8'>
 
@@ -86,7 +86,7 @@ function ShoppingCart() {
                     <p className='text-sm lg:text-base font-semibold text-gray-900 font-opensans mt-1'>{order.price}</p>
                     <div className='text-sm lg:text-base px-2 mt-2 rounded-full border border-orange-600 flex justify-between w-1/2 lg:w-1/6'>
                       <button className='text-orange-800'>+</button>
-                      <a>10</a>
+                      <a>1</a>
                       <button className='text-orange-800'>-</button>
                     </div>
                   </div>
@@ -97,41 +97,41 @@ function ShoppingCart() {
 
           {/* Order summary */}
           <div className='bg-gray-50 rounded-xl px-7 pt-5 pb-10 mt-4 lg:mt-0 lg:sticky lg:top-5 self-start'>
-            <h2 className='text-xl font-semibold font-opensans'>Resumen de compra</h2>
+            <h2 className='text-xl font-bold font-opensans'>Summary of purchase</h2>
             <div className='mt-5 pb-3 border-gray-200 border-b flex justify-between'>
               <h3 className='text-sm text-gray-500 font-opensans'>
                 <span aria-hidden='true' />
                 Subtotal
               </h3>
-              <p className='text-sm font-semibold text-gray-900 font-opensans'>S/ 15.00</p>
+              <p className='text-sm font-semibold text-gray-900 font-opensans'>$14.00</p>
             </div>
             <div className='mt-2 pb-3 border-gray-200 border-b flex justify-between'>
               <h3 className='text-sm text-gray-500 font-opensans'>
                 <span aria-hidden='true' />
                 Order summary
               </h3>
-              <p className='text-sm font-semibold text-gray-900 font-opensans'>S/ 3.00</p>
+              <p className='text-sm font-semibold text-gray-900 font-opensans'>$0.00</p>
             </div>
             <div className='mt-2 pb-3 border-gray-200 border-b flex justify-between'>
               <h3 className='text-sm text-gray-500 font-opensans'>
                 <span aria-hidden='true' />
-                Estimación de impuestos
+                Tax estimation
               </h3>
-              <p className='text-sm font-semibold text-gray-900 font-opensans'>S/ 7.03</p>
+              <p className='text-sm font-semibold text-gray-900 font-opensans'>$1.90</p>
             </div>
             <div className='mt-2 pb-3 flex justify-between'>
-              <h3 className='text-base font-semibold text-gray-900 font-opensans'>
+              <h3 className='text-base font-bold text-gray-900 font-opensans'>
                 <span aria-hidden='true' />
-                Total a pagar:
+                Total to pay:
               </h3>
-              <p className='text-base font-semibold text-gray-900 font-opensans'>S/ 150.03</p>
+              <p className='text-base font-semibold text-gray-900 font-opensans'>$15.90</p>
             </div>
 
             <button
               type='submit'
               className='mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-orange-600 px-8 py-3 text-base font-bold text-white font-opensans hover:bg-orange-700'
             >
-              Pagar
+              Pay
             </button>
           </div>
         </div>

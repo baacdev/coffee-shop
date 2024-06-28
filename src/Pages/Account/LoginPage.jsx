@@ -13,19 +13,19 @@ function LoginPage() {
     <>
       <div className='bg-white flex min-h-[90vh] flex-1 flex-col px-4 py-1 lg:px-8'>
         <div className='sm:mx-auto sm:w-full sm:max-w-sm text-center'>
-          <h2 className='mt-10 text-center text-2xl font-black font-opensans leading-9 tracking-tight text-gray-900'>
-            Inicia sesión en su cuenta
+          <h2 className='mt-10 text-center text-4xl font-black font-opensans leading-9 tracking-tight text-gray-900'>
+            Sign in
           </h2>
         </div>
 
         <div className='mt-10 sm:mx-auto sm:w-full sm:max-w-sm'>
           <form className='space-y-6' action='#' method='POST'>
             <div>
-              <a className='text-left text-sm font-bold font-opensanss tracking-tight text-gray-500'>
-                * indica campo obligatorio
+              <a className='text-left text-sm font-bold tracking-tight text-gray-500'>
+                * indicates required field
               </a>
               <label htmlFor='email' className=' text-gray-700 text-sm font-opensans font-black block leading-6 mt-3'>
-                * Dirección de correo electrónico
+                * Email address
               </label>
               <div className='mt-2'>
                 <input
@@ -42,7 +42,7 @@ function LoginPage() {
             <div>
               <div className='flex items-center justify-between'>
                 <label htmlFor='password' className='block text-sm font-black font-opensans leading-6 text-gray-700'>
-                  * Contraseña
+                  * Password
                 </label>
               </div>
               <div className='mt-2 relative'>
@@ -65,7 +65,7 @@ function LoginPage() {
                   to={'/account/forgot-password'}
                   className='font-black font-opensans underline underline-offset-2 text-orange-800 hover:text-orange-900'
                 >
-                  ¿Has olvidado tu contraseña?
+                  Forgot your password?
                 </Link>
               </div>
 
@@ -76,7 +76,7 @@ function LoginPage() {
                 type='submit'
                 className='shadow-lg bg-orange-800 w-fit ml-auto rounded-full border-none px-4 py-2 text-sm lg:text-base font-bold font-opensans text-gray-100 hover:bg-orange-900'
               >
-                Iniciar sesión
+                Sign in
               </button>
             </div>
 
@@ -84,16 +84,16 @@ function LoginPage() {
         </div>
         <div className='sm:mx-auto sm:w-full sm:max-w-sm text-center mb-10'>
           <h2 className='mt-40 text-center text-base font-black font-opensans leading-9 tracking-tight text-gray-900'>
-            ÚNETE A 'TU EMPRESA'® REWARDS
+          JOIN 'YOUR COMPANY'® REWARDS
           </h2>
           <p className='text-sm font-semibold font-opensans'>
-            Únase a 'Tu Empresa' Rewards para ganar comida y bebida gratis, obtener recargas gratuitas, pagar y pedir con su teléfono y mucho más.
+          Join 'Your Business' Rewards to earn free food and drink, get free top-ups, pay and order with your phone and much more.
           </p>
           <Link
             to={'/account/register'}
             className='mt-5 w-fit mx-auto lg:mx-auto flex items-center justify-center rounded-full border border-orange-900 px-4 py-2 text-sm lg:text-base font-bold font-opensans text-orange-800 hover:bg-orange-50'
           >
-            Únete ahora
+            Join now
           </Link>
         </div>
       </div>
