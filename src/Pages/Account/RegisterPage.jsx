@@ -13,7 +13,7 @@ function RegisterPage() {
     <>
       <div className='bg-white flex min-h-[90vh] flex-1 flex-col px-4 py-1 lg:px-8'>
         <div className='sm:mx-auto sm:w-full sm:max-w-sm text-center'>
-          <h2 className='mt-10 text-center text-2xl font-black font-opensans leading-9 tracking-tight text-gray-900'>
+          <h2 className='mt-10 text-center text-4xl font-black font-opensans leading-9 tracking-tight text-gray-900'>
             Create an account
           </h2>
         </div>

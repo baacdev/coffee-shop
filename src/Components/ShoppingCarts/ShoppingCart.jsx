@@ -129,7 +129,7 @@ function ShoppingCart() {
 
             <button
               type='submit'
-              className='mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-orange-600 px-8 py-3 text-base font-bold text-white font-opensans hover:bg-orange-700'
+              className='mt-3 flex w-full items-center justify-center rounded-md border border-transparent bg-orange-700 px-8 py-3 text-base font-bold text-white font-opensans hover:bg-orange-800'
             >
               Pay
             </button>
