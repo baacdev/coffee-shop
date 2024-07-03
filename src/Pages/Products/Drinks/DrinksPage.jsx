@@ -9,6 +9,7 @@ import Refreshers from './Refreshers'
 import ShakenEspressos from './ShakenEspressos'
 import ColdCoffees from './ColdCoffees'
 import HotCoffees from './HotCoffees'
+import HotTeas from './HotTeas'
 
 function DrinksPage() {
   const location = useLocation();
@@ -106,6 +107,14 @@ function DrinksPage() {
             </h1>
           </div>
           <ColdCoffees />
+
+           {/* HOT TEAS */}
+           <div id='hot-teas' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
+            <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
+              Hot Teas
+            </h1>
+          </div>
+          <HotTeas />
 
         </div>
       </div>
