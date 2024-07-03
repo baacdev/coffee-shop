@@ -28,8 +28,8 @@ const drinks = [
   {
     id: 4,
     name: 'Refreshers',
-    imageSrc: 'https://www.foodandwine.com/thmb/uDcO7GMWP3NqyUy4fGQhTFmpdNk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Starbucks-Spicy-Refreshers-FT-BLOG0424-2a27c6129e7948ff80f84126e9b13c83.jpg',
-    imageAlt: 'Front of mens Basic Tee in black.',
+    imageSrc: '/assets/img/drinks/refreshers/refreshers.avif',
+    imageAlt: 'Five colorful drinks in glasses on a table.',
   },
   {
     id: 5,
@@ -37,7 +37,30 @@ const drinks = [
     imageSrc: 'https://www.tasteofhome.com/wp-content/uploads/2023/04/FT23_272959_ST_3_03_2-Starbucks-Shaken-Espresso-TMB-studio.jpg',
     imageAlt: 'Front of mens Basic Tee in black.',
   },
-
+  {
+    id: 6,
+    name: 'Hot coffees',
+    imageSrc: '/assets/img/drinks/hot-coffees/hot-coffees.avif',
+    imageAlt: 'Two steaming coffee cups on a table.',
+  },
+  {
+    id: 7,
+    name: 'Cold coffees',
+    imageSrc: '/assets/img/drinks/cold-coffees/cold-coffees.avif',
+    imageAlt: 'Three coffee drinks topped with whipped cream and coffee beans.',
+  },
+  {
+    id: 8,
+    name: 'Hot teas',
+    imageSrc: '/assets/img/drinks/hot-teas/hot-teas.avif',
+    imageAlt: 'Hot tea with cinnamon, ginger and cloves arranged in a pattern.',
+  },
+  {
+    id: 9,
+    name: 'Iced teas and lemonades',
+    imageSrc: '/assets/img/drinks/iced-teas-and-lemonades/iced-teas-and-lemonades.avif',
+    imageAlt: 'Three glasses of iced tea with lemon slices on a wooden table.',
+  },
 ]
 const foods = [
   {
@@ -133,14 +156,12 @@ function MenuPage() {
                       />
                     </div>
                     <div className='mt-4 flex justify-center'>
-                      <div>
-                        <h3 className='text-base font-semibold font-opensans text-gray-700'>
-                          <Link className='hover:text-orange-500' href='#' onClick={(e) => handleSectionClick('drinks', drink.name, e)}>
-                            <span aria-hidden='true' className='absolute inset-0' />
-                            {drink.name}
-                          </Link>
-                        </h3>
-                      </div>
+                      <h3 className='text-base font-semibold font-opensans text-gray-700'>
+                        <Link className='hover:text-orange-500' href='#' onClick={(e) => handleSectionClick('drinks', drink.name, e)}>
+                          <span aria-hidden='true' className='absolute inset-0' />
+                          {drink.name}
+                        </Link>
+                      </h3>
                     </div>
                   </div>
                 ))}
@@ -184,7 +205,7 @@ function MenuPage() {
             <div className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
               <div className='min-w-0'>
                 <h1 className='mt-10 mb-2 text-xl font-bold font-opensans leading-7 text-gray-900 sm:truncate sm:text-2xl sm:tracking-tight'>
-                MERCHANDISE
+                  MERCHANDISE
                 </h1>
               </div>
             </div>
@@ -218,7 +239,7 @@ function MenuPage() {
             <div className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
               <div className='min-w-0'>
                 <h1 className='mt-10 mb-2 text-xl font-bold font-opensans leading-7 text-gray-900 sm:truncate sm:text-2xl sm:tracking-tight'>
-                At Home Coffee Page
+                  At Home Coffee Page
                 </h1>
               </div>
             </div>

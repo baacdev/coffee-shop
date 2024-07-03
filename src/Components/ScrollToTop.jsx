@@ -11,6 +11,7 @@ const ScrollToTop = () => {
       '/menu/drinks/cold-espresso', 
       '/menu/drinks/refreshers',
       '/menu/drinks/shaken-espresso', 
+      '/menu/drinks/cold-coffees',
       '/menu/foods/pastries',
       '/menu/foods/desserts',
       '/menu/foods/sandwiches',
