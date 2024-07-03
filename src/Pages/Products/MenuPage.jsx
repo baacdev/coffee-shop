@@ -9,54 +9,30 @@ import AtHomeCoffeePage from './AtHomeCoffee/AtHomeCoffeePage'
 const drinks = [
   {
     id: 1,
-    name: 'Frappuccinos',
-    imageSrc: 'https://www.clarin.com/2020/09/30/EjIM9hfpm_1200x0__1.jpg',
-    imageAlt: 'Front of mens Basic Tee in black.',
-  },
-  {
-    id: 2,
-    name: 'Hot Espresso',
-    imageSrc: 'https://previews.123rf.com/images/nerudol/nerudol1611/nerudol161100144/66710989-taza-de-espresso-sabroso-fresco-de-caf%C3%A9-caliente-con-granos-de-caf%C3%A9-sobre-fondo-oscuro.jpg',
-    imageAlt: 'Front of mens Basic Tee in black.',
-  },
-  {
-    id: 3,
-    name: 'Cold Espresso',
-    imageSrc: 'https://www.breville.com/content/dam/breville-brands/coffeehub/language-masters/mx_es/recipes/recipe-hero-stills/Recipes_Banner8_1200x1200_IcedLatte.jpeg',
-    imageAlt: 'Front of mens Basic Tee in black.',
-  },
-  {
-    id: 4,
-    name: 'Shaken Espresso',
-    imageSrc: 'https://www.tasteofhome.com/wp-content/uploads/2023/04/FT23_272959_ST_3_03_2-Starbucks-Shaken-Espresso-TMB-studio.jpg',
-    imageAlt: 'Front of mens Basic Tee in black.',
-  },
-  {
-    id: 5,
     name: 'Hot coffees',
     imageSrc: '/assets/img/drinks/hot-coffees/hot-coffees.avif',
     imageAlt: 'Two steaming coffee cups on a table.',
   },
   {
-    id: 6,
+    id: 2,
     name: 'Cold coffees',
     imageSrc: '/assets/img/drinks/cold-coffees/cold-coffees.avif',
     imageAlt: 'Three coffee drinks topped with whipped cream and coffee beans.',
   },
   {
-    id: 7,
+    id: 3,
     name: 'Hot teas',
     imageSrc: '/assets/img/drinks/hot-teas/hot-teas.avif',
     imageAlt: 'Hot tea with cinnamon, ginger and cloves arranged in a pattern.',
   },
   {
-    id: 8,
+    id: 4,
     name: 'Iced teas and lemonades',
     imageSrc: '/assets/img/drinks/iced-teas-and-lemonades/iced-teas-and-lemonades.avif',
     imageAlt: 'Three glasses of iced tea with lemon slices on a wooden table.',
   },
   {
-    id: 9,
+    id: 5,
     name: 'Refreshers',
     imageSrc: '/assets/img/drinks/refreshers/refreshers.avif',
     imageAlt: 'Five colorful drinks in glasses on a table.',
@@ -66,36 +42,36 @@ const foods = [
   {
     id: 1,
     name: 'Pastries',
-    imageSrc: 'https://5.imimg.com/data5/ZR/JQ/TK/IOS-15292022/chocolate-pastries.jpeg',
-    imageAlt: 'Front of mens Basic Tee in black.',
+    imageSrc: '/assets/img/foods/pastries/pastries.avif',
+    imageAlt: 'Four assorted cakes beautifully arranged on a table.',
   },
   {
     id: 2,
     name: 'Desserts',
-    imageSrc: 'https://www.paulinacocina.net/wp-content/uploads/2024/01/receta-de-postre-de-maracuya-Paulina-Cocina-Recetas-1200x675.jpg',
-    imageAlt: 'Front of mens Basic Tee in black.',
+    imageSrc: '/assets/img/foods/desserts/desserts.avif',
+    imageAlt: 'Assorted desserts beautifully arranged on a table.',
   },
   {
     id: 3,
     name: 'Sandwiches',
-    imageSrc: 'https://www.eatingwell.com/thmb/LQXwKPvgYghCs2LH7bwlsx0gD1Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/cucumber-caprese-sandwich-6343482dece14c3d876bc7bac317ecd8.jpg',
-    imageAlt: 'Front of mens Basic Tee in black.',
+    imageSrc: '/assets/img/foods/sandwiches/sandwiches.avif',
+    imageAlt: 'Assorted sandwiches on a table, including ham, turkey, and veggie options, ready to be enjoyed at a gathering.',
   },
 ]
 const merchandise = [
   {
     id: 1,
     name: 'Cold Cups',
-    imageSrc: 'https://img.freepik.com/vector-gratis/maqueta-diseno-cafeteria_1284-21752.jpg',
-    imageAlt: 'Front of mens Basic Tee in black.',
+    imageSrc: '/assets/img/merchandise/cold-cups/cold-cups.avif',
+    imageAlt: 'Colorful cups neatly arranged on a shelf.',
   },
 ]
-const atHomeCoffeePage = [
+const atHomeCoffee = [
   {
     id: 1,
     name: 'Whole Bean',
-    imageSrc: 'https://lawhimsy.com/wp-content/uploads/2019/01/fika-means-having-coffee-with-friends-and-enjoying-the-good-things-in-life-via-lawhimsy.jpg?w=848',
-    imageAlt: 'Front of mens Basic Tee in black.',
+    imageSrc: '/assets/img/at-home-coffee/whole-bean/whole-beans.avif',
+    imageAlt: 'Coffee beans in a burlap sack, ready to be ground and brewed for a fresh cup of coffee.',
   },
 ]
 
@@ -246,7 +222,7 @@ function MenuPage() {
             {/* At Home Coffee Page items */}
             <div className='flex justify-center mx-auto max-w-2xl px-4 py-1 sm:px-6 sm:py10 lg:max-w-7xl lg:px-8'>
               <div className='mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-20'>
-                {atHomeCoffeePage.map((coffeeItem) => (
+                {atHomeCoffee.map((coffeeItem) => (
                   <div key={coffeeItem.id} className='group relative'>
                     <div className='h-60 w-60 overflow-hidden rounded-full bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-60 lg:w-60'>
                       <img
@@ -323,7 +299,7 @@ function MenuPage() {
               {/* List of At Home Coffee */}
               <h3 className='text-xl font-bold font-opensans text-gray-900 pb-3'>AT HOME COFFEE</h3>
               <ul role='list' className='space-y-3 border-b border-gray-200 pb-6 text-sm font-semibold font-opensans text-gray-500'>
-                {atHomeCoffeePage.map((coffeeItem) => (
+                {atHomeCoffee.map((coffeeItem) => (
                   <li key={coffeeItem.name}>
                     {/* Links for each pack that handle clicks to browse */}
                     <Link className='hover:text-orange-500' href='#' onClick={(e) => handleSectionClick('at-home-coffee', coffeeItem.name, e)}>{coffeeItem.name}</Link>

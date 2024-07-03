@@ -5,32 +5,32 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 const merchandise = [
   {
     id: 1,
-    name: 'White Mermaid Reusable White Cup - 16 oz',
+    name: 'Cardboard cups with plastic lids - 12 oz',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/VASO_REUSABLE_BLANCO_16OZ_202303071248009818.PNG',
-    imageAlt: 'Merchandise',
+    imageSrc: '/assets/img/merchandise/cold-cups/cold-cups-cardboard-cups-with-plastic-lids.avif',
+    imageAlt: 'Three coffee cups arranged neatly on a wooden table.',
     price: '$9.00',
-    description: '011129110 - Siren White Reusable White Cup - 16 ox',
+    description: 'Cardboard cups with lined interior and plastic lid. More environmentally friendly option compared to plastic.',
     inStock: true,
   },
   {
     id: 2,
-    name: 'Siren Green Reusable White Tumbler - 16 oz',
+    name: 'Plastic cups with seal lids - 16 oz',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/VASO_REUSABLE_BLANCO_SIRENA_VERDE_16OZ_202303071252078126.PNG',
-    imageAlt: 'Merchandise',
+    imageSrc: '/assets/img/merchandise/cold-cups/cold-cups-plastic-cups-with-seal-lids.avif',
+    imageAlt: 'A white cup with a black handle on a wooden cutting board.',
     price: '$9.00',
-    description: 'Siren Green Reusable White Tumbler - 16 oz',
+    description: 'PET plastic cups with seal lid to avoid spills. Ideal for beverages that are taken to go.',
     inStock: false,
   },
   {
     id: 3,
     name: 'Reusable Cold Cup 24 oz',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/VASO_REUSABLE_FRIO_24OZ_202303071254370179.PNG',
-    imageAlt: 'Merchandise',
+    imageSrc: '/assets/img/merchandise/cold-cups/cold-cups-reusable-cold-cup.avif',
+    imageAlt: 'A black cup with a straw inside, ready for a refreshing drink.',
     price: '$10.00',
-    description: 'Reusable Cold Cup 24 oz',
+    description: 'Enjoy your cold beverages with our Reusable Cold Cup. Made of durable, BPA-free plastic, this cup includes a secure lid and reusable straw. Perfect for iced coffee, smoothies and more, its a stylish and sustainable option for your everyday beverages.',
     inStock: true,
   },
 ]
@@ -60,7 +60,7 @@ function ColdCups() {
               <img
                 src={item.imageSrc}
                 alt={item.imageAlt}
-                className='h-full w-full object-cover object-center'
+                className='h-full w-full object-cover object-center rounded-full'
               />
             </div>
             <div className='ml-4 flex flex-col justify-center'>

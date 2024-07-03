@@ -5,10 +5,10 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 const hotCoffees = [
   {
     id: 1,
-    name: 'Cappuccino caramelizado',
+    name: 'Caramelized cappuccino',
     imageSrc: '/assets/img/drinks/hot-coffees/hot-coffee-cappuccino-caramelizado.avif',
     imageAlt: 'A black cup of coffee with caramel swirl on top.',
-    price: '$4.30',
+    price: '$4.50',
     description: 'This sweet toffee-flavored coffee surprise is made with a spoonful of dulce de leche, which is literally caramelized condensed milk.',
     sizes: [
       {
@@ -64,7 +64,7 @@ const hotCoffees = [
     name: 'Latte vainilla',
     imageSrc: '/assets/img/drinks/hot-coffees/hot-coffee-latte-vainilla.avif',
     imageAlt: 'A cup of coffee with a heart design in the middle, perfect for a romantic morning pick-me-up.',
-    price: '$4.30',
+    price: '$4.00',
     description: 'Inspired by southern Italian influences, it captures the essence of their dark and intense coffees, highlighting their wild and spicy character.',
     sizes: [
       {

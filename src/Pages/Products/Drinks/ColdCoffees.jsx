@@ -8,7 +8,7 @@ const coldCoffees = [
     name: 'Cold brew vainilla',
     imageSrc: '/assets/img/drinks/cold-coffees/cold-coffee-cold-brew-vainilla.avif',
     imageAlt: 'Cold brew coffee topped with a scoop of creamy vanilla ice cream.',
-    price: '$4.30',
+    price: '$2.50',
     description: 'Refreshing cold brew coffee served with a dollop of vanilla ice cream.',
     sizes: [
       {

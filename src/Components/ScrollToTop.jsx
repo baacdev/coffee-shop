@@ -6,15 +6,11 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     const excludedPaths = [
-      '/menu/drinks/frappuccinos', 
-      '/menu/drinks/hot-espresso',
-      '/menu/drinks/cold-espresso', 
-      '/menu/drinks/refreshers',
-      '/menu/drinks/shaken-espresso', 
-      '/menu/drinks/cold-coffees',
       '/menu/drinks/hot-coffees',
+      '/menu/drinks/cold-coffees',
       '/menu/drinks/hot-teas',
       '/menu/drinks/iced-teas-and-lemonades',
+      '/menu/drinks/refreshers',
       '/menu/foods/pastries',
       '/menu/foods/desserts',
       '/menu/foods/sandwiches',

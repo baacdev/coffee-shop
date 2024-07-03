@@ -192,7 +192,7 @@ function Navbar() {
                       className='h-6 w-6 flex-shrink-0 text-black group-hover:text-gray-500'
                       aria-hidden='true'
                     />
-                    <span className='ml-2 text-sm font-medium text-black group-hover:text-gray-50'>5</span>
+                    <span className='ml-2 text-sm font-medium text-black group-hover:text-gray-500'>5</span>
                     <span className='sr-only'>items in cart, see bag</span>
                   </Link>
                 </div>

@@ -5,32 +5,42 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 const sandwiches = [
   {
     id: 1,
-    name: 'Butter croissant',
+    name: 'Almond croissant',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/CROISSANT_DE_MANTEQUILLA_V2.png',
-    imageAlt: 'Food',
+    imageSrc: '/assets/img/foods/sandwiches/sandwiches-almond-croissant.avif',
+    imageAlt: 'Croissant topped with sliced almonds, perfect for a delicious breakfast or snack.',
     price: '$3.20',
-    description: 'Butter croissant. Individual portion.reference images.',
+    description: 'Our Almond Croissant is a golden and crispy puff pastry, filled and covered with a rich almond cream. Perfect with a cup of coffee or tea, its a treat you cant miss.',
     inStock: false,
   },
   {
     id: 2,
-    name: 'Serrano Ham and Cheese Croissant',
+    name: 'Country ham and cheese croissant',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/CROISSANT_DE_JAMON_SERRANO_Y_QUESO_202303061814451866.PNG',
-    imageAlt: 'Food',
+    imageSrc: '/assets/img/foods/sandwiches/sandwiches-country-ham-and-cheese-croissant.avif',
+    imageAlt: 'Croissant with ham and cheese, a delicious French pastry filled with savory ingredients.',
     price: '$4.00',
-    description: 'Delicious sandwich made with our in-store baked French croissant, filled with slices of Serrano ham and Andean cheese.',
+    description: 'Our Country Ham and Cheese Croissant combines quality smoked ham with melted cheese, all wrapped in a crispy, freshly baked croissant. Perfect for a tasty breakfast or snack with your favorite coffee.',
     inStock: true,
   },
   {
     id: 3,
-    name: 'Country ham and cheese croissant',
+    name: 'Grilled chicken sandwich',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/croissant_jamon_pais_v3.png',
-    imageAlt: 'Food',
+    imageSrc: '/assets/img/foods/sandwiches/sandwiches-grilled-chicken-sandwich.avif',
+    imageAlt: 'Chicken sandwich with lettuce and tomato on a bun, a classic lunch option.',
     price: '$4.00',
-    description: 'Delicious sandwich made with our in-store baked French croissant, filled with slices of local ham and Andean cheese.',
+    description: 'Our Grilled Chicken Sandwich features grilled chicken breast with fresh lettuce, juicy tomato and creamy mayo, all on an artisan bun. Simple, delicious and perfect for any meal of the day.',
+    inStock: true,
+  },
+  {
+    id: 4,
+    name: 'Serrano ham and cheese croissant',
+    href: '#',
+    imageSrc: '/assets/img/foods/sandwiches/sandwiches-serrano-ham-and-cheese-croissant.avif',
+    imageAlt: 'Croissant with ham and cheese on a plate, a delicious breakfast option.',
+    price: '$4.00',
+    description: 'Our Serrano Ham and Cheese Croissant combines quality Serrano ham with melted cheese, wrapped in a soft and crunchy croissant. An elegant and delicious flavor to enjoy with your coffee or tea.',
     inStock: true,
   },
 ]
@@ -58,7 +68,7 @@ function Sandwiches() {
               <img
                 src={sandwich.imageSrc}
                 alt={sandwich.imageAlt}
-                className='h-full w-full object-cover object-center'
+                className='h-full w-full object-cover object-center rounded-full'
               />
             </div>
             <div className='ml-4 flex flex-col justify-center'>

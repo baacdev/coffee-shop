@@ -5,32 +5,32 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 const pastries = [
   {
     id: 1,
-    name: 'Orange Muffin',
+    name: 'Blueberry biscuit',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/MUFFIN_DE_NARANJA_Y_CHOCOCHIPS_V2.png',
-    imageAlt: 'Food',
+    imageSrc: '/assets/img/foods/pastries/pastries-blueberry-biscuit.avif',
+    imageAlt: 'A freshly baked blueberry muffin on a white plate.',
     price: '$3.00',
-    description: 'Muffin made with wheat flour, vegetable oil, eggs, orange juice, orange zest, bitter topping, margarine, sugar, vanilla and orange essence. Single portion. Reference images.',
+    description: 'Our Blueberry Biscuit is soft and fluffy, full of juicy blueberries that add a touch of sweetness and tartness. Baked until golden brown, its crispy exterior complements its tender interior. Perfect with a cup of coffee or tea, enjoy it fresh from the oven!',
     inStock: true,
   },
   {
     id: 2,
-    name: 'Carrot keke',
+    name: 'Carrot cake',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/KEKE_DE_ZANAHORIA_V2.png',
-    imageAlt: 'Food',
+    imageSrc: '/assets/img/foods/pastries/pastries-carrot-cake.avif',
+    imageAlt: 'Close-up of a delicious slice of carrot cake with cream cheese frosting and walnuts on top.',
     price: '$3.00',
-    description: 'Muffin made with wheat flour, vegetable oil, eggs, orange juice, orange zest, bitter topping, margarine, sugar, vanilla and orange essence. Single portion. Reference images.',
+    description: 'Our Carrot Cake is soft and spicy, with chunks of fresh carrot for natural sweetness. Topped with a delicious cream cheese frosting, each bite is a perfect blend of flavors. Perfect with a cup of coffee or tea.',
     inStock: false,
   },
   {
     id: 3,
-    name: 'Blueberry biscuit',
+    name: 'Orange muffin',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/GALLETA_DE_CRANBERRIES_V2.png',
-    imageAlt: 'Food',
+    imageSrc: '/assets/img/foods/pastries/pastries-orange-muffin.avif',
+    imageAlt: 'A freshly baked blueberry muffin on a white plate.',
     price: '$2.00',
-    description: 'Muffin made with wheat flour, vegetable oil, eggs, orange juice, orange zest, bitter topping, margarine, sugar, vanilla and orange essence. Single portion. Reference images.',
+    description: 'Our Orange Muffin is fluffy and full of fresh orange flavor, with a hint of citrus that revitalizes every bite. Perfect for breakfast or a snack, this muffin is great with a cup of coffee or tea.',
     inStock: true,
   },
 ]
@@ -59,7 +59,7 @@ function Pastries() {
               <img
                 src={cake.imageSrc}
                 alt={cake.imageAlt}
-                className='h-full w-full object-cover object-center'
+                className='h-full w-full object-cover object-center rounded-full'
               />
             </div>
             <div className='ml-4 flex flex-col justify-center'>

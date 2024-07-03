@@ -5,32 +5,12 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 const wholeBean = [
   {
     id: 1,
-    name: 'Peru',
+    name: 'Coffee beans',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/PERU_202405130911227975.PNG',
-    imageAlt: 'WholeBean',
+    imageSrc: '/assets/img/at-home-coffee/whole-bean/whole-bean-coffee-bag.avif',
+    imageAlt: 'Coffee beans and a bag of coffee on a wooden table.',
     price: '$10.00',
-    description: 'Bag of coffee beans of 250 gr. Herbal and nutty notes, mainly almond; medium roast, medium acidity and full body.',
-    inStock: true,
-  },
-  {
-    id: 2,
-    name: 'Espresso Roast',
-    href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/ESPRESSO_250_GR_202405130906146272.PNG',
-    imageAlt: 'WholeBean',
-    price: '$10.00',
-    description: 'Bag of coffee beans of 250 gr. Herbal and nutty notes, mainly almond; medium roast, medium acidity and full body.',
-    inStock: false,
-  },
-  {
-    id: 3,
-    name: 'Verona',
-    href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/VERONA_202405130913058459.PNG',
-    imageAlt: 'WholeBean',
-    price: '$10.00',
-    description: 'Bag of coffee beans of 250 gr. Herbal and nutty notes, mainly almond; medium roast, medium acidity and full body.',
+    description: 'High quality coffee with a balanced flavor and notes of fruits and nuts. Known for its mild acidity and medium body.',
     inStock: true,
   },
 ]
@@ -59,7 +39,7 @@ function WholeBean() {
               <img
                 src={coffeeBeans.imageSrc}
                 alt={coffeeBeans.imageAlt}
-                className='h-full w-full object-cover object-center'
+                className='h-full w-full object-cover object-center rounded-full'
               />
             </div>
             <div className='ml-4 flex flex-col justify-center'>

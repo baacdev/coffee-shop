@@ -2,15 +2,11 @@ import React, { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { ChevronRightIcon } from '@heroicons/react/20/solid';
 
-import Frappuccinos from './Frappuccinos'
-import HotEspresso from './HotEspresso'
-import ColdEspresso from './ColdEspresso'
-import Refreshers from './Refreshers'
-import ShakenEspressos from './ShakenEspressos'
 import ColdCoffees from './ColdCoffees'
 import HotCoffees from './HotCoffees'
 import HotTeas from './HotTeas'
 import IcedTeasAndLemonades from './IcedTeasAndLemonades'
+import Refreshers from './Refreshers'
 
 function DrinksPage() {
   const location = useLocation();
@@ -53,38 +49,6 @@ function DrinksPage() {
         </header>
 
         <div className='bg-white border-gray-200 lg:border-l'>
-          {/* FRAPPUCCINOS */}
-          <div id='frappuccinos' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
-            <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
-              Frappuccinos
-            </h1>
-          </div>
-          <Frappuccinos />
-
-          {/* Hot Espresso */}
-          <div id='hot-espresso' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
-            <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
-              Hot Espresso
-            </h1>
-          </div>
-          <HotEspresso />
-
-          {/* Cold Espresso */}
-          <div id='cold-espresso' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
-            <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
-              Cold Espresso
-            </h1>
-          </div>
-          <ColdEspresso />
-
-          {/* SHAKEN'S ESPRESSOS */}
-          <div id='shaken-espresso' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
-            <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
-              Shaken's espressos
-            </h1>
-          </div>
-          <ShakenEspressos />
-
           {/* HOT COFFEES */}
           <div id='hot-coffees' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
             <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
@@ -96,7 +60,7 @@ function DrinksPage() {
           {/* COLD COFFEE */}
           <div id='cold-coffees' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
             <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
-              Cold Coffees
+              Cold coffees
             </h1>
           </div>
           <ColdCoffees />
@@ -104,7 +68,7 @@ function DrinksPage() {
           {/* HOT TEAS */}
           <div id='hot-teas' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
             <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
-              Hot Teas
+              Hot teas
             </h1>
           </div>
           <HotTeas />
@@ -112,7 +76,7 @@ function DrinksPage() {
           {/* ICED TEAS AND LEMONADES */}
           <div id='iced-teas-and-lemonades' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
             <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
-              Iced Teas And Lemonades
+              Iced teas and lemonades
             </h1>
           </div>
           <IcedTeasAndLemonades />

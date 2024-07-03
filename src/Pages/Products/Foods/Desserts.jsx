@@ -5,33 +5,23 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 const desserts = [
   {
     id: 1,
-    name: 'Vegetable apple crisp',
+    name: 'Chocolate brownie',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/CROCANTE_DE_MANZANA_VEGETAL_202303071258380326.PNG',
-    imageAlt: 'Food',
-    price: '$4.00',
-    description: 'Apple filling mixed with chestnuts and pecans, sweetened with panela, wrapped in a sweet wheat flour dough and topped with vegan crumble with oat flakes. Images for reference.',
+    imageSrc: '/assets/img/foods/desserts/desserts-chocolate-brownie.avif',
+    imageAlt: 'A stack of brownies on a cutting board with a glass of milk.',
+    price: '$3.00',
+    description: 'Our Chocolate Brownie is dense and moist, with an intense chocolate flavor that satisfies the sweetest cravings. Perfect to enjoy on its own or with a scoop of ice cream, this classic never disappoints.',
     inStock: true,
   },
   {
     id: 2,
-    name: 'Vanilla Cake Pop',
+    name: 'Red fruit cheesecake',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/Cake_Pop_V1.png',
-    imageAlt: 'Food',
-    price: '$2.00',
-    description: 'Vanilla-flavoured sponge cake filled with manjar and coated in chocolate icing with sprinkles. No added sugar. Images for reference.',
+    imageSrc: '/assets/img/foods/desserts/desserts-red-fruit-cheesecake.avif',
+    imageAlt: 'A delicious cheesecake topped with fresh berries.',
+    price: '$3.00',
+    description: 'Our Red Fruit Cheesecake is creamy and smooth, with a crunchy base and a fresh red fruit topping. Each bite offers a perfect balance of sweetness and acidity. Ideal with a cup of coffee or tea.',
     inStock: true,
-  },
-  {
-    id: 3,
-    name: 'Cheesecake de Chocolate',
-    href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/CHEESECAKE_DE_CHOCOLATE_V2.png',
-    imageAlt: 'Food',
-    price: '$4.00',
-    description: 'Cheesecake with double chocolate biscuit base, vanilla flavoured cream, topped with bitter topping, decorated with whipped cream, brownie and hazelnut cream. Individual portion. Reference images.',
-    inStock: false,
   },
 ]
 
@@ -60,7 +50,7 @@ function Desserts() {
               <img
                 src={dessert.imageSrc}
                 alt={dessert.imageAlt}
-                className='h-full w-full object-cover object-center'
+                className='h-full w-full object-cover object-center rounded-full'
               />
             </div>
             <div className='ml-4 flex flex-col justify-center'>
