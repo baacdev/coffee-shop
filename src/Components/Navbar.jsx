@@ -72,7 +72,7 @@ function Navbar() {
                         to={page.href}
                         className={classNames(
                           'block p-2 font-bold font-opensans text-gray-700',
-                          location.pathname.startsWith(page.href) && 'bg-orange-100 border-b-4 border-orange-600'
+                          location.pathname.startsWith(page.href) && 'bg-orange-50'
                         )}
                         onClick={() => setOpen(false)}
                       >
@@ -128,8 +128,8 @@ function Navbar() {
                   <span className='sr-only'>Your Company</span>
                   <img
                     className='h-16 w-auto'
-                    src='/assets/logos/logo.png'
-                    alt=''
+                    src='/assets/logos/icon-coffee-shop.png'
+                    alt='A white coffee cup with the word "coffee" written in black on the side.'
                   />
                 </Link>
               </div>
