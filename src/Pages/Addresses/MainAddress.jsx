@@ -9,8 +9,8 @@ const promotions = [
     description: 'Street 159, San Martin de Socabaya - Arequipa',
     href: 'https://www.google.com/maps/',
     buttonName: 'Open Google Maps',
-    imageAlt: 'Location',
-    imageSrc: '/assets/img/maps.webp'
+    imageAlt: 'Outdoor cafe with wooden tables and chairs, inviting setting for al fresco dining.',
+    imageSrc: '/assets/img/address/coffee-shop.avif'
   },
 ]
 
