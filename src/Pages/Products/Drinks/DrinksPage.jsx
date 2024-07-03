@@ -77,14 +77,6 @@ function DrinksPage() {
           </div>
           <ColdEspresso />
 
-          {/* REFRESHERS */}
-          <div id='refreshers' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
-            <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
-              Refreshers
-            </h1>
-          </div>
-          <Refreshers />
-
           {/* SHAKEN'S ESPRESSOS */}
           <div id='shaken-espresso' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
             <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
@@ -109,8 +101,8 @@ function DrinksPage() {
           </div>
           <ColdCoffees />
 
-           {/* HOT TEAS */}
-           <div id='hot-teas' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
+          {/* HOT TEAS */}
+          <div id='hot-teas' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
             <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
               Hot Teas
             </h1>
@@ -120,10 +112,18 @@ function DrinksPage() {
           {/* ICED TEAS AND LEMONADES */}
           <div id='iced-teas-and-lemonades' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
             <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
-            Iced Teas And Lemonades
+              Iced Teas And Lemonades
             </h1>
           </div>
           <IcedTeasAndLemonades />
+
+          {/* REFRESHERS */}
+          <div id='refreshers' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
+            <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
+              Refreshers
+            </h1>
+          </div>
+          <Refreshers />
 
         </div>
       </div>

@@ -5,12 +5,12 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 const refreshers = [
   {
     id: 1,
-    name: 'Strawberry Frozen Refresher',
+    name: 'Cola soft drink',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/STRAWBERRY_ACAI_FROZEN_REFRESHER_202303231539284586.PNG',
-    imageAlt: 'Drink',
+    imageSrc: '/assets/img/drinks/refreshers/refresher-cola-soft-drink.avif',
+    imageAlt: 'A glass of cola on a wooden table.',
     price: '$4.20',
-    description: 'New! Drink made with green coffee extract, strawberry juice, in a frozen version. Without sweeteners. Reference images.',
+    description: 'Carbonated soft drink flavored with vanilla, cinnamon, citrus oils and other aromas.',
     sizes: [
       {
         name: 'Alto',
@@ -34,12 +34,12 @@ const refreshers = [
   },
   {
     id: 2,
-    name: 'Mango Dragon Frozen Refresher',
+    name: 'Orange soda',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/MANGO_DRAGON_FROZEN_REFRESHER_202303231541268568.PNG',
-    imageAlt: 'Drink',
+    imageSrc: '/assets/img/drinks/refreshers/refresher-orange-soda.avif',
+    imageAlt: 'Refreshing orange and lemonade cocktail in a clear glass with ice cubes and a slice of orange on the rim.',
     price: '$4.20',
-    description: 'New! Drink made with green coffee extract, real Pitahaya juice in frozen version. Without sweeteners. Reference images.',
+    description: 'an effervescent and sweet, orange flavored soda drink.',
     sizes: [
       {
         name: 'Alto',
@@ -63,12 +63,12 @@ const refreshers = [
   },
   {
     id: 3,
-    name: 'Strawberry Acaí Refresher',
+    name: 'Sparkling lemonade',
     href: '#',
-    imageSrc: 'https://www.starbucks.pe/Multimedia/productos/STRAWBERRY_ACAI_REFRESHER_V2.png',
-    imageAlt: 'Drink',
+    imageSrc: '/assets/img/drinks/refreshers/refresher-sparkling-lemonade.avif',
+    imageAlt: 'A jar of lemonade with fresh lemons and a lemon slice on the side.',
     price: '$4.20',
-    description: 'Drink made with green coffee bean extract, mixed with strawberry and acai juice. Without sweeteners. Reference images.',
+    description: 'Drink made with lemons, sugar and water.',
     sizes: [
       {
         name: 'Alto',
@@ -114,7 +114,7 @@ function Refreshers() {
               <img
                 src={refresher.imageSrc}
                 alt={refresher.imageAlt}
-                className='h-full w-full object-cover object-center'
+                className='h-full w-full object-cover object-center rounded-full'
               />
             </div>
             <div className='ml-4 flex flex-col justify-center'>

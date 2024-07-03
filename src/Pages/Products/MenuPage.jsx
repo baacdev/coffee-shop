@@ -27,39 +27,39 @@ const drinks = [
   },
   {
     id: 4,
-    name: 'Refreshers',
-    imageSrc: '/assets/img/drinks/refreshers/refreshers.avif',
-    imageAlt: 'Five colorful drinks in glasses on a table.',
-  },
-  {
-    id: 5,
     name: 'Shaken Espresso',
     imageSrc: 'https://www.tasteofhome.com/wp-content/uploads/2023/04/FT23_272959_ST_3_03_2-Starbucks-Shaken-Espresso-TMB-studio.jpg',
     imageAlt: 'Front of mens Basic Tee in black.',
   },
   {
-    id: 6,
+    id: 5,
     name: 'Hot coffees',
     imageSrc: '/assets/img/drinks/hot-coffees/hot-coffees.avif',
     imageAlt: 'Two steaming coffee cups on a table.',
   },
   {
-    id: 7,
+    id: 6,
     name: 'Cold coffees',
     imageSrc: '/assets/img/drinks/cold-coffees/cold-coffees.avif',
     imageAlt: 'Three coffee drinks topped with whipped cream and coffee beans.',
   },
   {
-    id: 8,
+    id: 7,
     name: 'Hot teas',
     imageSrc: '/assets/img/drinks/hot-teas/hot-teas.avif',
     imageAlt: 'Hot tea with cinnamon, ginger and cloves arranged in a pattern.',
   },
   {
-    id: 9,
+    id: 8,
     name: 'Iced teas and lemonades',
     imageSrc: '/assets/img/drinks/iced-teas-and-lemonades/iced-teas-and-lemonades.avif',
     imageAlt: 'Three glasses of iced tea with lemon slices on a wooden table.',
+  },
+  {
+    id: 9,
+    name: 'Refreshers',
+    imageSrc: '/assets/img/drinks/refreshers/refreshers.avif',
+    imageAlt: 'Five colorful drinks in glasses on a table.',
   },
 ]
 const foods = [
