@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { Typography } from '@material-tailwind/react';
 import { Link } from 'react-router-dom';
+import { ChevronDownIcon } from '@heroicons/react/24/outline';
 
 // links
 const SITEMAP = [
@@ -81,22 +82,39 @@ const SITEMAP = [
 
 const currentYear = new Date().getFullYear();
 
-
 function Footer() {
+  const [openSections, setOpenSections] = useState([]);
+
+  const toggleSection = (index) => {
+    setOpenSections((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+    );
+  };
+
   return (
     <footer className='relative w-full bg-white border-t border-gray-300'>
       <div className='mx-auto w-full max-w-screen-2xl px-8'>
         <div className='mx-auto grid w-full grid-cols-1 gap-8 py-12 md:grid-cols-2 lg:grid-cols-5'>
-          {SITEMAP.map((section) => (
+          {SITEMAP.map((section, index) => (
             <div key={section.title} className='w-full'>
-              <Typography
-                variant='small'
-                color='blue-gray'
-                className='mb-2 font-bold font-opensans uppercase'
+              <div 
+                className='flex justify-between items-center cursor-pointer md:cursor-default'
+                onClick={() => toggleSection(index)}
               >
-                {section.title}
-              </Typography>
-              <ul className='space-y-1'>
+                <Typography
+                  variant='small'
+                  color='blue-gray'
+                  className='mb-2 font-bold font-opensans uppercase'
+                >
+                  {section.title}
+                </Typography>
+                <ChevronDownIcon 
+                  className={`w-5 h-5 transition-transform duration-300 ${openSections.includes(index) ? 'rotate-180' : ''} md:hidden`}
+                />
+              </div>
+              <ul 
+                className={`space-y-1 transition-all duration-700 overflow-hidden ${openSections.includes(index) ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'} md:max-h-full md:opacity-100`}
+              >
                 {section.links.map((link) => (
                   <Typography key={link.name} as='li' color='blue-gray' className='font-normal'>
                     <Link
@@ -141,7 +159,7 @@ function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

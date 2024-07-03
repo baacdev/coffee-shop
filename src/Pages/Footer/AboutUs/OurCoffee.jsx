@@ -2,7 +2,7 @@ import React from 'react'
 
 function OurCoffee() {
   return (
-    <div className="bg-white min-h-[100vh]">
+    <div className="bg-white min-h-[93vh]">
       <div className="mx-auto max-w-3xl px-4">
         <div className="mx-auto max-w-2xl py-10 lg:max-w-none">
           <div className="space-y-12">
