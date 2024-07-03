@@ -2,14 +2,14 @@ import { useState } from 'react'
 import { Dialog, DialogPanel, Radio, RadioGroup, Transition, TransitionChild } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 
-const hotTeas = [
+const icedTeasAndLemonades = [
   {
     id: 1,
-    name: 'Chai tea with spices',
-    imageSrc: '/assets/img/drinks/hot-teas/hot-tea-chai-tea-with-spices.avif',
-    imageAlt: 'A mug filled with cinnamon and cardamom, ready for a warm and comforting drink.',
+    name: 'Lemon iced tea',
+    imageSrc: '/assets/img/drinks/iced-teas-and-lemonades/iced-tea-and-lemonade-lemon-iced-tea.avif',
+    imageAlt: 'A glass of iced tea with lemon slices and mint leaves.',
     price: '$4.30',
-    description: 'Aromatic drink that blends black tea with various herbs and spices.',
+    description: 'This lemon iced tea is a fresh and energetic drink made with black tea, lemon juice, sugar, water and ice.',
     sizes: [
       {
         name: 'Alto',
@@ -33,11 +33,11 @@ const hotTeas = [
   },
   {
     id: 2,
-    name: 'Chamomile herbal tea',
-    imageSrc: '/assets/img/drinks/hot-teas/hot-tea-chamomile-herbal-tea.avif',
-    imageAlt: 'A cup of chamomile tea with chamomile flowers floating on top.',
+    name: 'Peach iced tea',
+    imageSrc: '/assets/img/drinks/iced-teas-and-lemonades/iced-tea-and-lemonade-peach-iced-tea.avif',
+    imageAlt: 'Two glasses of iced tea with peach slices on a wooden table.',
     price: '$4.30',
-    description: 'Soft notes of apple, and in the cup a soft sweetness similar to honey is perceived.',
+    description: 'Peach tea is made from the dried leaves and peach rind.',
     sizes: [
       {
         name: 'Alto',
@@ -61,11 +61,11 @@ const hotTeas = [
   },
   {
     id: 3,
-    name: 'Matcha green tea',
-    imageSrc: '/assets/img/drinks/hot-teas/hot-tea-matcha-green-tea.avif',
-    imageAlt: 'A cup of green tea on a wooden table.',
+    name: 'Strawberry lemonade',
+    imageSrc: '/assets/img/drinks/iced-teas-and-lemonades/iced-tea-and-lemonade-strawberry-lemonade.avif',
+    imageAlt: 'Strawberry lemonade cocktail garnished with lemon wedge.',
     price: '$4.30',
-    description: 'High quality green tea ground into powder. ',
+    description: 'The sweetness of the fresh strawberries and the tartness of the lemon juice are tempered by the bitterness of the lemons pith.',
     sizes: [
       {
         name: 'Alto',
@@ -93,25 +93,26 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-function HotTeas() {
-  const [open, setOpen] = useState(false)
-  const [selectedHotTea, setSelectedHotTea] = useState(hotTeas[0])
-  const [selectedSize, setSelectedSize] = useState(selectedHotTea.sizes[0])
 
-  const handleHotTeaClick = (hotTea) => {
-    setSelectedHotTea(hotTea)
-    setSelectedSize(hotTea.sizes[0])
+function IcedTeasAndLemonades() {
+  const [open, setOpen] = useState(false)
+  const [selectedIcedTeaAndLemonade, setSelectedIcedTeaAndLemonade] = useState(icedTeasAndLemonades[0])
+  const [selectedSize, setSelectedSize] = useState(selectedIcedTeaAndLemonade.sizes[0])
+
+  const handleIcedTeaAndLemonadeClick = (icedTeaAndLemonade) => {
+    setSelectedIcedTeaAndLemonade(icedTeaAndLemonade)
+    setSelectedSize(icedTeaAndLemonade.sizes[0])
     setOpen(true)
   }
   return (
     <div className='flex flex-col justify-between mx-auto max-w-2xl px-4 py-1 sm:px-6 sm:py-10 lg:max-w-7xl lg:px-8'>
       <div className='mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-20'>
-        {hotTeas.map((hotTea) => (
-          <div key={hotTea.id} className='group relative flex' onClick={() => handleHotTeaClick(hotTea)}>
+        {icedTeasAndLemonades.map((icedTeaAndLemonade) => (
+          <div key={icedTeaAndLemonade.id} className='group relative flex' onClick={() => handleIcedTeaAndLemonadeClick(icedTeaAndLemonade)}>
             <div className='flex-shrink-0 size-32 lg:h-60 lg:w-60 overflow-hidden'>
               <img
-                src={hotTea.imageSrc}
-                alt={hotTea.imageAlt}
+                src={icedTeaAndLemonade.imageSrc}
+                alt={icedTeaAndLemonade.imageAlt}
                 className='h-full w-full object-cover object-center rounded-full'
               />
             </div>
@@ -119,10 +120,10 @@ function HotTeas() {
               <h3 className='text-gray-700 text-base font-bold font-opensans'>
                 <a className='hover:text-orange-500 cursor-pointer'>
                   <span aria-hidden='true' className='absolute inset-0' />
-                  {hotTea.name}
+                  {icedTeaAndLemonade.name}
                 </a>
               </h3>
-              <p className='text-gray-900 text-sm font-semibold font-opensans'>From: {hotTea.price}</p>
+              <p className='text-gray-900 text-sm font-semibold font-opensans'>From: {icedTeaAndLemonade.price}</p>
             </div>
           </div>
         ))}
@@ -164,20 +165,20 @@ function HotTeas() {
                     <div className='grid grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8 w-full'>
                       <div className='flex-shrink-0 size-60 lg:h-full lg:w-full overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5 flex items-center justify-center mx-auto'>
                         <img
-                          src={selectedHotTea.imageSrc}
-                          alt={selectedHotTea.imageAlt}
+                          src={selectedIcedTeaAndLemonade.imageSrc}
+                          alt={selectedIcedTeaAndLemonade.imageAlt}
                           className='object-cover object-center size-full lg:size-auto'
                         />
                       </div>
                       <div className='sm:col-span-8 lg:col-span-7'>
-                        <h2 className='text-2xl font-bold text-gray-900 sm:pr-12'>{selectedHotTea.name}</h2>
+                        <h2 className='text-2xl font-bold text-gray-900 sm:pr-12'>{selectedIcedTeaAndLemonade.name}</h2>
 
                         <section aria-labelledby='information-heading' className='mt-2'>
                           <h3 id='information-heading' className='sr-only'>
-                            Hot Tea information
+                          Iced Tea And Lemonade information
                           </h3>
 
-                          <p className='text-sm text-gray-900 lg:text-lg'>{selectedHotTea.description}</p>
+                          <p className='text-sm text-gray-900 lg:text-lg'>{selectedIcedTeaAndLemonade.description}</p>
                         </section>
 
                         <section aria-labelledby='options-heading' className='mt-10'>
@@ -190,7 +191,7 @@ function HotTeas() {
                                 onChange={setSelectedSize}
                                 className='mt-4 flex justify-around space-x-3'
                               >
-                                {selectedHotTea.sizes.map((size) => (
+                                {selectedIcedTeaAndLemonade.sizes.map((size) => (
                                   <Radio
                                     key={size.name}
                                     value={size}
@@ -266,4 +267,4 @@ function HotTeas() {
   )
 }
 
-export default HotTeas
+export default IcedTeasAndLemonades

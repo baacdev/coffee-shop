@@ -10,6 +10,7 @@ import ShakenEspressos from './ShakenEspressos'
 import ColdCoffees from './ColdCoffees'
 import HotCoffees from './HotCoffees'
 import HotTeas from './HotTeas'
+import IcedTeasAndLemonades from './IcedTeasAndLemonades'
 
 function DrinksPage() {
   const location = useLocation();
@@ -41,7 +42,7 @@ function DrinksPage() {
                     <div className='flex items-center'>
                       <ChevronRightIcon className='h-5 w-5 flex-shrink-0 text-gray-400' aria-hidden='true' />
                       <a className='ml-4 text-base text-gray-600 font-bold font-opensans'>
-                        Bebidas
+                        Drinks
                       </a>
                     </div>
                   </li>
@@ -115,6 +116,14 @@ function DrinksPage() {
             </h1>
           </div>
           <HotTeas />
+
+          {/* ICED TEAS AND LEMONADES */}
+          <div id='iced-teas-and-lemonades' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
+            <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
+            Iced Teas And Lemonades
+            </h1>
+          </div>
+          <IcedTeasAndLemonades />
 
         </div>
       </div>
