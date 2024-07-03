@@ -8,10 +8,10 @@ const promotions = [
     description: 'Get to know the coffee methods and take home your favorite.',
     promotionStartDate: '',
     promotionEndDate: '',
-    href: '/menu/merch-y-cafe-en-grano/merch',
+    href: '/menu/merchandise',
     buttonName: 'Buy now',
     imageAlt: 'A coffee maker, tea maker, and glass pitcher arranged on a countertop.',
-    imageSrc: '/assets/img/electrodomesticos.jpeg'
+    imageSrc: '/assets/img/home/home-appliances.avif'
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const promotions = [
     href: '/account/register',
     buttonName: 'Sign up',
     imageAlt: 'Stanley stainless steel water bottle: a durable and sleek hydration solution for on-the-go adventures.',
-    imageSrc: '/assets/img/stanley-termo.png'
+    imageSrc: '/assets/img/home/stanley-thermos.avif'
   },
   {
     id: 3,
@@ -30,21 +30,10 @@ const promotions = [
     description: 'Order in store your perfect combination to start the day with joy and good taste.',
     promotionStartDate: '01-04-2024',
     promotionEndDate: '16-09-2024',
-    href: '/menu',
+    href: '/menu/drinks/cold-coffees',
     buttonName: 'Learn more',
     imageAlt: 'Caramel apple latte in a Starbucks cup, topped with whipped cream and caramel drizzle.',
-    imageSrc: '/assets/img/caremel_macchiato_bananaa_bread.jpg'
-  },
-  {
-    id: 4,
-    name: 'Retro season is here',
-    description: 'Enjoy our delicious coffee-free vanilla Frappuccino with mango dragon fruit.',
-    promotionStartDate: '09-02-2024',
-    promotionEndDate: '21-07-2024',
-    href: '/menu/bebidas/frappuccinos',
-    buttonName: 'Learn more',
-    imageAlt: 'Two glasses of pink milkshake topped with whipped cream, served in clear glassware.',
-    imageSrc: '/assets/img/frappuccino-rosa.jpg'
+    imageSrc: '/assets/img/home/caremel-macchiat-banana-bread.avif'
   },
 ]
 
