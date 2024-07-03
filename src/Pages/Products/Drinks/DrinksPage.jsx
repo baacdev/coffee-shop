@@ -8,6 +8,7 @@ import ColdEspresso from './ColdEspresso'
 import Refreshers from './Refreshers'
 import ShakenEspressos from './ShakenEspressos'
 import ColdCoffees from './ColdCoffees'
+import HotCoffees from './HotCoffees'
 
 function DrinksPage() {
   const location = useLocation();
@@ -50,53 +51,62 @@ function DrinksPage() {
         </header>
 
         <div className='bg-white border-gray-200 lg:border-l'>
+          {/* FRAPPUCCINOS */}
           <div id='frappuccinos' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
             <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
               Frappuccinos
             </h1>
           </div>
-          {/* FRAPPUCCINOS */}
           <Frappuccinos />
 
+          {/* Hot Espresso */}
           <div id='hot-espresso' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
             <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
               Hot Espresso
             </h1>
           </div>
-          {/* Hot Espresso */}
           <HotEspresso />
 
+          {/* Cold Espresso */}
           <div id='cold-espresso' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
             <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
               Cold Espresso
             </h1>
           </div>
-          {/* Cold Espresso */}
           <ColdEspresso />
 
+          {/* REFRESHERS */}
           <div id='refreshers' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
             <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
               Refreshers
             </h1>
           </div>
-          {/* REFRESHERS */}
           <Refreshers />
 
+          {/* SHAKEN'S ESPRESSOS */}
           <div id='shaken-espresso' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
             <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
               Shaken's espressos
             </h1>
           </div>
-          {/* SHAKEN'S ESPRESSOS */}
           <ShakenEspressos />
 
+          {/* HOT COFFEES */}
+          <div id='hot-coffees' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
+            <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
+              Hot coffees
+            </h1>
+          </div>
+          <HotCoffees />
+
+          {/* COLD COFFEE */}
           <div id='cold-coffees' className='mx-auto max-w-screen-2xl px-4 border-gray-200 border-b sm:px-6 lg:px-8 xl:flex xl:items-center xl:justify-between'>
             <h1 className='mt-10 mb-2 text-lg leading-7 font-bold text-gray-900 font-opensans sm:truncate sm:text-2xl sm:tracking-tight'>
               Cold Coffees
             </h1>
           </div>
-          {/* COLD COFFEE */}
           <ColdCoffees />
+
         </div>
       </div>
     </>
